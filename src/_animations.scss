@@ -1,0 +1,53 @@
+@keyframes neon {
+  from {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #228DFF,
+      0 0 35px #228DFF,
+      0 0 40px #228DFF,
+      0 0 50px #228DFF,
+      0 0 75px #228DFF;
+  }
+  to {
+    text-shadow:
+      0 0 3px #fff,
+      0 0 5px #fff,
+      0 0 7px #fff,
+      0 0 9px #228DFF,
+      0 0 20px #228DFF,
+      0 0 24px #228DFF,
+      0 0 30px #228DFF,
+      0 0 50px #228DFF;
+  }
+}
+
+$colors: ("teal": var(--neon-color-1), "pink": var(--neon-color-2));
+@each $name, $color in $colors {
+  @keyframes #{$name}-neonline {
+    from {
+      box-shadow:
+        0 0 5px $color,
+        0 0 10px $color,
+        0 0 15px $color,
+        0 0 20px $color,
+        0 0 35px $color,
+        0 0 40px $color,
+        0 0 50px $color,
+        0 0 75px $color;
+    }
+    to {
+      box-shadow:
+        0 0 3px $color,
+        0 0 5px $color,
+        0 0 7px $color,
+        0 0 9px $color,
+        0 0 20px $color,
+        0 0 24px $color,
+        0 0 30px $color,
+        0 0 50px $color;
+    }
+  }
+}
+

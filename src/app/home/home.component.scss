@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Neon;
+  src: url(/assets/NeonTubes2.otf) format("opentype");
+}
+
+.main, nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  .f-hello {
+    color: var(--text-color-light);
+  }
+  
+  .f-name {
+    font-family: 'Neon';
+    font-weight: 100;
+    font-size: 70px;
+    color: var(--text-color-mid);
+    transition: all 0.5s;
+  
+    &:hover {
+      color: var(--text-color-light);
+      animation: neon 1.5s ease-in-out infinite alternate;
+    }
+  }
+}
+
+.header2 {
+  display: flex;
+  height: 100vh;
+
+  .dsg-mode, .dev-mode {
+    width: 50%;
+    height: 100%;
+    transition: all 0.5s;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .dsg-mode {
+    background-color: white;
+    background-image: url('/assets/fmn.png');
+  }
+
+  .dev-mode {
+    background-color: #242424;
+    background-image: url('/assets/fm.png');
+  }
+}
+
+.about {
+  min-height: 500px;
+  background-color: red;
+}
+
+.bars {
+  position: absolute;
+  top: 190px;
+  // z-index: -1;
+  transform: rotate(-5deg);
+  width: 100vw;
+
+  &:not(.neons) {
+    transform-origin: 100% 0%;
+    right: 0px;
+  }
+}
+
+.line {
+  width: 100%;
+  margin-bottom: 32px;
+  transition: all 0.5s;
+
+  &:not(.neons) {
+    &:nth-child(1) {
+      border-top: 4px solid #93e922;
+    }
+    &:nth-child(2) {
+      border-top: 4px solid #822eb9;
+    }
+    &:nth-child(3) {
+      border-top: 4px solid #FF0000;
+    }
+    &:nth-child(4) {
+      border-top: 4px solid #0000ff;
+    }
+    &:nth-child(5) {
+      border-top: 4px solid #ffff00;
+    }
+  }
+}
+
+.neons {
+  transform-origin: 0% 100%;
+
+  .line {
+    &:nth-child(1) {
+      border-top: 4px solid var(--neon-color-1L);
+      animation: teal-neonline 1.5s ease-in-out infinite alternate;
+    }
+  
+    &:nth-child(2) {
+      border-top: 4px solid var(--neon-color-2L);
+      animation: pink-neonline 1.5s ease-in-out infinite alternate;
+    }
+  }
+}
