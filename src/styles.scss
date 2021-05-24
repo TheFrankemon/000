@@ -1,1 +1,55 @@
+@mixin colorVars {
+  /* Base colors */
+  #{--primary-color}: #4DC1D5;
+  #{--secondary-color}: #FE0900;
+  #{--third-color}: #FDB813;
+
+  /* Base monochromatic colors */
+  #{--bw-dark-color}: #232626;
+  #{--bw-mid-dark-color}: #828585;
+  #{--bw-mid-color}: #E1E3E3;
+  #{--bw-mid-light-color}: #F9F9F9;
+  #{--bw-light-color}: #FFFFFF;
+
+  /* Status colors */
+  #{--success-color}: #4CD964;
+  #{--warning-color}: #FDB813;
+  #{--disabled-color}: var(--bw-mid-dark-color);
+  #{--alert-color}: #FE0900;
+
+  /* Text color variables */
+  #{--text-color-dark}: var(--bw-dark-color);
+  #{--text-color-mid}: var(--bw-mid-dark-color);
+  #{--text-color-light}: var(--bw-light-color);
+
+  /* Border color variables */
+  #{--border-color-dark}: var(--bw-mid-dark-color);
+  #{--border-color-mid}: var(--bw-mid-color);
+  #{--border-color-light}: var(--bw-light-color);
+
+  /* Background color variables */
+  #{--background-color-dark}: var(--bw-mid-dark-color);
+  #{--background-color-mid-dark}: var(--bw-mid-color);
+  #{--background-color-mid-light}: var(--bw-mid-light-color);
+  #{--background-color-light}: var(--bw-light-color);
+
+  /* Icon color variables */
+  #{--icon-color-dark}: var(--bw-mid-dark-color);
+  #{--icon-color-mid}: var(--bw-mid-color);
+  #{--icon-color-light}: var(--bw-light-color);
+
+  /* Element-specific color variables */
+  #{--shadow-color}: #63676733;
+  #{--scrollbar-color}: #00000033;
+  // #{--main-background-color}: var(--bw-mid-light-color);
+}
+
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0px;
+  @include colorVars;
+}
