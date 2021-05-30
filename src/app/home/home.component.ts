@@ -24,8 +24,12 @@ export class HomeComponent implements OnInit {
     if (!this.wait) {
       const mouseX = $event;
       const mouseAtPercent = Math.round((mouseX / this.screenWidth) * 100);
-      this.scrPercentLeft = mouseAtPercent;
-      this.scrPercentRight = 100 - mouseAtPercent;
+      if (mouseAtPercent < 10) {
+        this.scrPercentLeft = 95;
+      } else if (mouseAtPercent > 90) {
+        this.scrPercentLeft = 5;
+      }
+      this.scrPercentRight = 100 - this.scrPercentLeft;
 
       this.wait = true;
       setTimeout(() => {

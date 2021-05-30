@@ -1,12 +1,8 @@
 <div class="main">
   <!-- <nav>
   </nav> -->
-<!-- 
-    <span class="f-hello">Hello!</span>
-    <span class="f-name">Franco Montiel</span>
--->
-  <div class="header2">
-    <div class="dsg-mode" [style]="'width: ' + scrPercentLeft + '%'">
+  <div class="header">
+    <div class="dsg-mode" [style]="'clip-path: inset(0 ' + scrPercentRight + '% 0 0)'">
       <div class="bars">
         <div class="line"></div>
         <div class="line"></div>
@@ -15,11 +11,13 @@
         <div class="line"></div>
       </div>
     </div>
-    <div class="dev-mode" [style]="'width: ' + scrPercentRight + '%'">
+    <div class="dev-mode" [style]="'clip-path: inset(0 0 0 ' + scrPercentLeft + '%)'">
       <div class="bars neons">
         <div class="line"></div>
         <div class="line"></div>
       </div>
+    <!-- <span class="f-name">Franco Montiel</span>
+    <span class="f-hello">Hello!</span> -->
     </div>
   </div>
   <div class="about">

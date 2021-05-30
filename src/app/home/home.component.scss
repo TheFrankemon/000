@@ -8,7 +8,6 @@
   flex-direction: column;
 }
 
-.header {
   .f-hello {
     color: var(--text-color-light);
   }
@@ -25,14 +24,15 @@
       animation: neon 1.5s ease-in-out infinite alternate;
     }
   }
-}
 
-.header2 {
+.header {
   display: flex;
   height: 100vh;
+  position: relative;
 
   .dsg-mode, .dev-mode {
-    width: 50%;
+    position: absolute;
+    width: 100%;
     height: 100%;
     transition: all 0.5s;
     overflow: hidden;
@@ -40,7 +40,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
   }
 
   .dsg-mode {
@@ -62,13 +61,28 @@
 .bars {
   position: absolute;
   top: 190px;
-  // z-index: -1;
   transform: rotate(-5deg);
   width: 100vw;
 
   &:not(.neons) {
-    transform-origin: 100% 0%;
+    transform-origin: 0% 0%;
     right: 0px;
+  }
+
+  &.neons {
+    transform-origin: 0% 100%;
+  
+    .line {
+      &:nth-child(1) {
+        border-top: 4px solid var(--neon-color-1L);
+        animation: teal-neonline 1.5s ease-in-out infinite alternate;
+      }
+    
+      &:nth-child(2) {
+        border-top: 4px solid var(--neon-color-2L);
+        animation: pink-neonline 1.5s ease-in-out infinite alternate;
+      }
+    }
   }
 }
 
@@ -92,22 +106,6 @@
     }
     &:nth-child(5) {
       border-top: 4px solid #ffff00;
-    }
-  }
-}
-
-.neons {
-  transform-origin: 0% 100%;
-
-  .line {
-    &:nth-child(1) {
-      border-top: 4px solid var(--neon-color-1L);
-      animation: teal-neonline 1.5s ease-in-out infinite alternate;
-    }
-  
-    &:nth-child(2) {
-      border-top: 4px solid var(--neon-color-2L);
-      animation: pink-neonline 1.5s ease-in-out infinite alternate;
     }
   }
 }
