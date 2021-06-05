@@ -36,6 +36,11 @@
     .titles {
       margin-bottom: 100px;
     }
+
+    .f-subtitle {
+      font-size: 30px;
+      margin: 10px 0px 0px;
+    }
   }
 
   .dsg-mode {
@@ -48,15 +53,14 @@
     .titles {
       margin-left: 50px;
 
-      .f-hello, .f-name {
+      .f-hello, .f-name, .f-subtitle {
         color: var(--text-color-dark);
       }
 
       .f-hello {
         font-size: 70px;
-        margin: 0px;
       }
-      
+
       .f-name {
         font-weight: 100;
         font-size: 70px;
@@ -74,21 +78,21 @@
     .titles {
       margin-left: 50px;
 
-      .f-hello {
+      .f-hello, .f-subtitle {
         color: var(--text-color-light);
       }
-      
+
+      .f-hello {
+        font-size: 70px;
+      }
+
       .f-name {
         font-family: 'Neon';
         font-weight: 100;
-        font-size: 70px;
-        color: var(--text-color-mid);
-        transition: all 0.5s;
-      
-        &:hover {
-          color: var(--text-color-light);
-          animation: neon 1.5s ease-in-out infinite alternate;
-        }
+        font-size: 120px;
+        z-index: 1;
+
+        animation: neon 1.5s ease-in-out 4s infinite alternate, text-light 4s step-end both;
       }
     }
   }

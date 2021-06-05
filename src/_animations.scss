@@ -4,23 +4,28 @@
       0 0 5px #fff,
       0 0 10px #fff,
       0 0 15px #fff,
-      0 0 20px #228DFF,
-      0 0 35px #228DFF,
-      0 0 40px #228DFF,
-      0 0 50px #228DFF,
-      0 0 75px #228DFF;
+      0 0 20px #919191,
+      0 0 35px #919191,
+      0 0 40px #919191,
+      0 0 50px #919191,
+      0 0 75px #919191;
   }
   to {
     text-shadow:
       0 0 3px #fff,
       0 0 5px #fff,
       0 0 7px #fff,
-      0 0 9px #228DFF,
-      0 0 20px #228DFF,
-      0 0 24px #228DFF,
-      0 0 30px #228DFF,
-      0 0 50px #228DFF;
+      0 0 9px #919191,
+      0 0 20px #919191,
+      0 0 24px #919191,
+      0 0 30px #919191,
+      0 0 50px #919191;
   }
+}
+
+@keyframes text-light {
+  from { color: var(--text-color-mid); }
+  to { color: var(--text-color-light); }
 }
 
 $colors: ("teal": var(--neon-color-1), "pink": var(--neon-color-2));
