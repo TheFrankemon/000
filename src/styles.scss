@@ -41,13 +41,12 @@
   #{--icon-color-light}: var(--bw-light-color);
 
   /* Element-specific color variables */
-  #{--shadow-color}: #63676733;
   #{--neon-color-1}: #23E7F8;
   #{--neon-color-1L}: #67f2ff;
   #{--neon-color-2}: #E57EE8;
   #{--neon-color-2L}: #e197e4;
   #{--scrollbar-color}: #00000033;
-  // #{--main-background-color}: var(--bw-mid-light-color);
+  #{--dark-background-color}: #242424;
 }
 
 /* You can add global styles to this file, and also import other style files */
