@@ -48,10 +48,54 @@
 
     .content {
       margin-right: 5%;
+
+      .tray {
+        width: 100vw;
+        height: 100vh;
+
+        $total: 17;
+        @for $i from 1 through $total {
+          $scale: scale(((($i - 1) * 1.9) / 16) + 1.1);
+          // OldRange = (OldMax - OldMin)
+          // OldRange = (17 - 1) = 16
+          // NewRange = (NewMax - NewMin)
+          // NewRange = (3 - 1.1) = 1.9
+          // NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin
+          // NewValue = (((x - 1) * 1.9) / 16) + 1.1
+
+          object:nth-child(#{$i}){
+            left: random(95) * 1% - 5;
+            animation: raise#{$i} 6 + random(15) +s linear infinite;
+            animation-delay: random(17) + s;
+            transform: $scale;
+            z-index: $i - 7;
+            filter: blur(0.175 * $i + px);
+
+            @keyframes raise#{$i} {
+              to{
+                bottom:120vh;
+                transform: $scale rotate((random(180) - 90) + deg);
+              }
+            }
+          }
+        }
+      }
+
+      object {
+        width: 192px;
+        height: 192px;
+        position:absolute;
+        bottom: -100vh;
+        transform-style: preserve-3d;
+      }
     }
 
     .titles {
       margin-left: 50px;
+
+      position: absolute;
+      bottom: 0px;
+      z-index: 11;
 
       .f-hello, .f-name, .f-subtitle {
         color: var(--text-color-dark);
