@@ -1,13 +1,12 @@
-.main, nav {
+.main {
   display: flex;
   flex-direction: column;
 }
 
 .header {
-  display: flex;
+  position: fixed;
   height: 100vh;
-  position: relative;
-  background-color: white;
+  width: 100vw;
 
   .dsg-mode {
     display: flex;
@@ -23,7 +22,6 @@
     background-size: cover;
     background: white;
     background: linear-gradient(3deg, #000000 10%, #747474 75%, #dfdfdf 97%, #ffffff 100%);
-    clip-path: polygon(0% 0%, 5% 10%, 50% 0%, 100% 0%, 100% 70%, 90% 95%, 10% 90%, 0% 100%);
 
     > img {
       position: absolute;
@@ -108,41 +106,52 @@
       }
     }
   }
+}
+
+.header-footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 30vh;
+  background-color: red;
+  opacity: 0.5;
+  clip-path: polygon(10% 60%, 90% 90%, 100% 0%, 100% 100%, 0% 100%);
 
   .sm-icons {
     display: flex;
     position: absolute;
-    top: 90%;
+    bottom: 30px;
     left: 10%;
-    transform: rotate(2deg);
+    transform: rotate(3.5deg);
 
     .sm-icon-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
+      width: 56px;
+      height: 56px;
       box-sizing: border-box;
       margin-top: 2px;
       transition: box-shadow .25s, border .25s;
-
+  
       &:hover {
-        box-shadow: inset -4px 4px 7px 0px gray;
-        border-bottom: 1px solid #ededed;
-        border-left: 1px solid #ededed;
+        box-shadow: inset -4px 4px 9px 0px black;
       }
     }
 
     object {
       pointer-events: none;
-      width: 32px;
-      height: 32px;
+      width: 48px;
+      height: 48px;
       margin: 4px;
     }
   }
 }
 
+
 .about {
   min-height: 500px;
   background-color: red;
+  z-index: 1;
+  margin-top: 100vh;
 }
