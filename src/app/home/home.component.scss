@@ -7,6 +7,7 @@
   display: flex;
   height: 100vh;
   position: relative;
+  background-color: white;
 
   .dsg-mode {
     display: flex;
@@ -20,7 +21,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: white;
+    background: white;
+    background: linear-gradient(3deg, #000000 10%, #747474 75%, #dfdfdf 97%, #ffffff 100%);
+    clip-path: polygon(0% 0%, 5% 10%, 50% 0%, 100% 0%, 100% 70%, 90% 95%, 10% 90%, 0% 100%);
 
     > img {
       position: absolute;
@@ -84,8 +87,8 @@
       bottom: 0px;
       z-index: 11;
   
-      .f-hello, .f-name, .f-subtitle {
-        color: var(--text-color-dark);
+      .f-hello, .f-name {
+        color: var(--text-color-light);
       }
   
       .f-hello {
@@ -99,7 +102,11 @@
 
       .f-subtitle {
         font-size: 30px;
-        margin: 10px 0px 0px;
+        text-transform: uppercase;
+        transform: translate(15px, -12px) rotateZ(-3deg);
+        background-color: goldenrod;
+        font-family: 'Courier New', Courier, monospace;
+        color: var(--text-color-dark);
       }
     }
   }
