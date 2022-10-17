@@ -1,0 +1,42 @@
+<div class="about-header">
+  <h1>
+    Why Franco?
+    ➜
+  </h1>
+</div>
+<div class="why-container">
+  <div class="why-panel">
+    <div class="badui">
+
+      <div class="website-example" [class.new-ui]="enableCSS">
+        <b>Back when I was a noobie</b><b> - January 20, 2013</b>
+        <div class="dumb-container">
+          <b>The Basic Timeline</b>
+          <img [src]="'assets/orange'+ (enableCSS ? '.png' : '.jpg')">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+
+      <div class="toggle" [class.activated]="enableCSS" (click)="toggleCSS()">
+        <div class="toggle-thingy"></div>
+        <div class="toggle-line"></div>
+      </div>
+    </div>
+    <p class="why-panel-label">I am addicted to pixel-perfection and eye-pleasant UI</p>
+  </div>
+  <div class="why-panel">
+    <p class="why-panel-label">As of {{ currentDay | date: 'mediumDate' }},<br>I have aprox.</p>
+    <div class="txt">
+      {{ elapsedWorkXP | number: '1.2-2' }}
+    </div>
+    <p class="why-panel-label">years of work experience on Web development</p>
+  </div>
+  <div class="why-panel">
+    <div class="img"></div>
+    <p class="why-panel-label">I don't know yet</p>
+  </div>
+</div>
+<div class="header-footer">
+</div>
