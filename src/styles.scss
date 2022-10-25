@@ -1,5 +1,3 @@
-@import '_animations';
-
 @mixin colorVars {
   /* Base colors */
   #{--primary-color}: #4DC1D5;
@@ -41,10 +39,6 @@
   #{--icon-color-light}: var(--bw-light-color);
 
   /* Element-specific color variables */
-  #{--neon-color-1}: #23E7F8;
-  #{--neon-color-1L}: #67f2ff;
-  #{--neon-color-2}: #E57EE8;
-  #{--neon-color-2L}: #e197e4;
   #{--scrollbar-color}: #00000033;
   #{--dark-background-color}: #242424;
 }

@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Neon;
-  src: url(/assets/NeonTubes2.otf) format("opentype");
-}
-
 .main, nav {
   display: flex;
   flex-direction: column;
@@ -13,7 +8,7 @@
   height: 100vh;
   position: relative;
 
-  .dsg-mode, .dev-mode {
+  .dsg-mode {
     display: flex;
     align-items: flex-end;
     position: absolute;
@@ -25,6 +20,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: white;
 
     > img {
       position: absolute;
@@ -32,19 +28,6 @@
       width: auto;
       right: 90px;
     }
-
-    .titles {
-      margin-bottom: 100px;
-    }
-
-    .f-subtitle {
-      font-size: 30px;
-      margin: 10px 0px 0px;
-    }
-  }
-
-  .dsg-mode {
-    background-color: white;
 
     .content {
       margin-right: 5%;
@@ -55,7 +38,8 @@
 
         $total: 17;
         @for $i from 1 through $total {
-          $scale: scale(((($i - 1) * 1.9) / 16) + 1.1);
+          //                               was 1/16
+          $scale: scale(((($i - 1) * 1.9) * 0.0625) + 1.1);
           // OldRange = (OldMax - OldMin)
           // OldRange = (17 - 1) = 16
           // NewRange = (NewMax - NewMin)
@@ -91,52 +75,31 @@
     }
 
     .titles {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 100px;
       margin-left: 50px;
-
+  
       position: absolute;
       bottom: 0px;
       z-index: 11;
-
+  
       .f-hello, .f-name, .f-subtitle {
         color: var(--text-color-dark);
       }
-
+  
       .f-hello {
         font-size: 70px;
       }
-
+  
       .f-name {
         font-weight: 100;
         font-size: 70px;
       }
-    }
-  }
 
-  .dev-mode {
-    background-color: var(--dark-background-color);
-
-    .content {
-      margin-left: 5%;
-    }
-
-    .titles {
-      margin-left: 50px;
-
-      .f-hello, .f-subtitle {
-        color: var(--text-color-light);
-      }
-
-      .f-hello {
-        font-size: 70px;
-      }
-
-      .f-name {
-        font-family: 'Neon';
-        font-weight: 100;
-        font-size: 120px;
-        z-index: 1;
-
-        animation: neon 1.5s ease-in-out 4s infinite alternate, text-light 4s step-end both;
+      .f-subtitle {
+        font-size: 30px;
+        margin: 10px 0px 0px;
       }
     }
   }
@@ -145,66 +108,4 @@
 .about {
   min-height: 500px;
   background-color: red;
-}
-
-.bars {
-  position: absolute;
-  top: 190px;
-  transform: rotate(-5deg);
-  width: 100vw;
-
-  &:not(.neons) {
-    transform-origin: -134% 0%;
-    right: 0px;
-
-    .line {
-      border-top: 4px solid var(--dark-background-color);
-
-      &:nth-child(2) {
-        opacity: 0.85;
-      }
-      &:nth-child(3) {
-        opacity: 0.7;
-      }
-      &:nth-child(4) {
-        opacity: 0.55;
-      }
-      &:nth-child(5) {
-        opacity: 0.4;
-      }
-      &:nth-child(6) {
-        opacity: 0.25;
-      }
-      &:nth-child(7) {
-        opacity: 0.1;
-      }
-    }
-  }
-
-  &.neons {
-    transform-origin: 0% 100%;
-  
-    .line {
-      &:nth-child(1) {
-        border-top: 4px solid var(--neon-color-1L);
-        animation: teal-neonline 1.5s ease-in-out infinite alternate;
-      }
-    
-      &:nth-child(2) {
-        border-top: 4px solid var(--neon-color-2L);
-        animation: pink-neonline 1.5s ease-in-out infinite alternate;
-      }
-    }
-  }
-}
-
-.line {
-  width: 100%;
-  margin-bottom: 32px;
-  transition: all 0.5s;
-}
-
-.titles {
-  display: flex;
-  flex-direction: column;
 }
