@@ -1,0 +1,151 @@
+:host {
+  min-height: 100vh;
+  background-color: #061292d1;
+  z-index: 1;
+  margin-top: -1px;
+}
+
+.about-header {
+  display: flex;
+  height: 30vh;
+  background-color: white;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 60% 80%, 40% 50%, 0% 100%);
+
+  h1 {
+    margin: 90px 30px 0px;
+  }
+}
+
+.about-wrapper {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.work,
+.nowork {
+  flex: 1;
+  transform: skewY(352deg);
+}
+
+.xp-section {
+  display: flex;
+  flex-direction: column;
+  margin: 70px;
+  background-color: #ffffff26;
+  padding: 0px 20px;
+  gap: 20px;
+  position: relative;
+}
+
+.nowork-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.opacity-title {
+  position: absolute;
+  top: 0px;
+  margin-top: -56.5px;
+  color: #ffffff26;
+  font-size: 60px;
+}
+
+.xp-item {
+  display: flex;
+  margin: 20px 0px;
+  gap: 20px;
+}
+
+.img-holder {
+  width: 200px;
+  height: 120px;
+  background-color: #ffffff26;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.xp-content {
+  .xp-title {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .flag {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    margin-right: 5px;
+    flex-shrink: 0;
+    background-position: center;
+  }
+
+  .xp-dates {
+    color: #FFFFFFB3;
+  }
+
+  .xp-detail {
+    margin-top: 10px;
+    color: #FFF;
+  }
+
+  .gold-label {
+    background: linear-gradient( 186deg, #462523 0, #cb9b51 22%,  #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+#witco {
+  .img-holder {
+    background-image: url('/assets/xp/witco-w.png');
+  }
+
+  .flag {
+    background-image: url('https://flagcdn.com/h20/fr.jpg');
+  }
+}
+
+#ancestral {
+  .img-holder {
+    background-image: url('/assets/xp/ag-w.png');
+  }
+
+  .flag {
+    background-image: url('https://flagcdn.com/h20/bo.jpg');
+  }
+}
+
+#impeller {
+  .img-holder {
+    background-image: url('/assets/xp/imp-w.png');
+  }
+
+  .flag {
+    background-image: url('https://flagcdn.com/h20/us.jpg');
+  }
+}
+
+#assure {
+  .img-holder {
+    background-image: url('/assets/xp/as-w.png');
+  }
+
+  .flag {
+    background-image: url('https://flagcdn.com/h20/bo.jpg');
+  }
+}
+
+#upb .img-holder {
+  background-image: url('/assets/xp/upb-w.png');
+}
+
+#cba .img-holder {
+  background-image: url('/assets/xp/cba-w.png');
+}
+
+#gdg .img-holder {
+  background-image: url('/assets/xp/gdg-w.png');
+}
