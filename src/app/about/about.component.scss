@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Chalktastic;
-  src: url(/assets/Chalktastic.ttf) format("truetype");
+  font-family: FlipClock;
+  src: url(/assets/FLIPclockblack.ttf) format("truetype");
 }
 @font-face {
   font-family: CenturyGothic;
@@ -47,7 +47,6 @@
   }
 
   .img,
-  .txt,
   .badui {
     width: 100%;
     background-color: #00000030;
@@ -114,15 +113,31 @@
     height: 150px;
   }
 
-  .txt {
+  .clock-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    font-family: Chalktastic;
-    color: white;
-    font-size: 30px;
+
+    .clock {
+      padding: 10px;
+      background-color: #FFFFFF;
+    }
+
+    @keyframes blink {
+      0%  {font-weight: bold;}
+      5%  {font-weight: normal;}
+      10%  {font-weight: bold;}
+    }
+
+    .txt {
+      margin-top: -18px;
+      font-family: FlipClock;
+      font-size: 60px;
+      font-weight: bold;
+      animation: blink 1s infinite;
+    }
   }
+
 }
 
 .website-example {
