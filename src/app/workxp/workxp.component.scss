@@ -18,7 +18,7 @@
 
 .about-wrapper {
   display: flex;
-  margin-bottom: 50px;
+  margin: 0px 70px 50px;
 }
 
 .work,
@@ -27,13 +27,16 @@
   transform: skewY(352deg);
 }
 
+.nowork {
+  display: flex;
+  flex-direction: column;
+}
+
 .xp-section {
   display: flex;
   flex-direction: column;
-  margin: 70px;
+  margin: 50px 0px;
   background-color: #ffffff26;
-  padding: 0px 20px;
-  gap: 20px;
   position: relative;
 }
 
@@ -53,23 +56,52 @@
 
 .xp-item {
   display: flex;
-  margin: 20px 0px;
+  align-items: center;
   gap: 20px;
+  padding: 20px;
+  transition: box-shadow cubic-bezier(0.65, 0.05, 0.36, 1) 0.5s;
+
+  &:hover {
+    box-shadow: inset -8px 8px 20px 4px #99AAFFBF;
+
+    .img-holder,
+    .xp-content {
+      transform: translate(-10px, -10px);
+    }
+
+    .xp-dates,
+    .xp-detail {
+      max-height: 300px;
+      opacity: 1;
+    }
+
+    .xp-detail {
+      margin-top: 10px;
+    }
+  }
+}
+
+.img-holder,
+.xp-content {
+  transition: transform ease-in-out 0.5s;
 }
 
 .img-holder {
-  width: 200px;
-  height: 120px;
-  background-color: #ffffff26;
+  width: 150px;
+  height: 90px;
   background-size: cover;
   flex-shrink: 0;
 }
 
 .xp-content {
+  padding: 0px 20px;
+  border-left: 1px solid #FFFFFF;
+
   .xp-title {
     display: flex;
     align-items: center;
     color: white;
+    font-size: 24px;
   }
 
   .flag {
@@ -82,12 +114,18 @@
     background-position: center;
   }
 
+  .xp-dates,
+  .xp-detail {
+    max-height: 0px;
+    opacity: 0;
+    transition: all cubic-bezier(0.65, 0.05, 0.36, 1) 0.5s;
+  }
+
   .xp-dates {
     color: #FFFFFFB3;
   }
 
   .xp-detail {
-    margin-top: 10px;
     color: #FFF;
   }
 
