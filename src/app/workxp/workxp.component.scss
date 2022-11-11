@@ -3,6 +3,7 @@
   background-color: #061292d1;
   z-index: 1;
   margin-top: -1px;
+  position: relative;
 }
 
 .about-header {
@@ -18,7 +19,7 @@
 
 .about-wrapper {
   display: flex;
-  margin: 0px 70px 50px;
+  margin: 40px 70px;
 }
 
 .work,
@@ -186,4 +187,185 @@
 
 #gdg .img-holder {
   background-image: url('/assets/xp/gdg-w.png');
+}
+
+.skills-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+
+  section {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+
+    &:nth-child(odd) {
+      margin-left: 20%;
+    }
+    &:nth-child(even) {
+      margin-left: -20%;
+    }
+
+    .stone-wrap {
+      position: relative;
+
+      .stone {
+        width: 200px;
+        height: 200px;
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        background-size: contain;
+        top: 60px;
+        left: 40px;
+      }
+    }
+  }
+}
+
+.skill-content {
+  h1 {
+    font-size: 50px;
+    background: #FFFFFF;
+  }
+
+  .scrolling-feats {
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+}
+
+#angular {
+  .stone-wrap {
+    // FIXME: Automate: Create CSS function to apply alpha to given color
+    filter: drop-shadow(5px 0px 10px #FF4500CC) drop-shadow(-5px 0px 10px #FA3200CC);
+
+    .stone {
+      background-color: #FF4500;
+      clip-path: polygon(0% 90%, 20% 30%, 60% 0%, 100% 90%, 50% 100%);
+    }
+
+    .logo {
+      background-image: url('/assets/skills/angular.png');
+    }
+  }
+
+  .skill-content {
+    h1 {
+      background: linear-gradient(80deg, #FF4500 0%, #ffffff 50%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+#sass {
+  .stone-wrap {
+    // FIXME: Automate: Create CSS function to apply alpha to given color
+    filter: drop-shadow(5px 0px 10px #C76395CC) drop-shadow(-5px 0px 10px #C76395CC);
+
+    .stone {
+      background-color: #C76395;
+      clip-path: polygon(0% 90%, 20% 30%, 60% 0%, 100% 90%, 50% 100%);
+    }
+
+    .logo {
+      background-image: url('/assets/skills/sass.png');
+    }
+  }
+
+  .skill-content {
+    h1 {
+      background: linear-gradient(80deg, #C76395 0%, #ffffff 50%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+#typescript {
+  .stone-wrap {
+    // FIXME: Automate: Create CSS function to apply alpha to given color
+    filter: drop-shadow(5px 0px 10px #3077C6CC) drop-shadow(-5px 0px 10px #3077C6CC);
+
+    .stone {
+      background-color: #3077C6;
+      clip-path: polygon(0% 90%, 20% 30%, 60% 0%, 100% 90%, 50% 100%);
+    }
+
+    .logo {
+      background-image: url('/assets/skills/typescript.png');
+    }
+  }
+
+  .skill-content {
+    h1 {
+      background: linear-gradient(80deg, #3077C6 0%, #ffffff 50%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+#illustrator {
+  .stone-wrap {
+    // FIXME: Automate: Create CSS function to apply alpha to given color
+    filter: drop-shadow(5px 0px 10px #FF9B00CC) drop-shadow(-5px 0px 10px #FF9B00CC);
+
+    .stone {
+      background-color: #FF9B00;
+      clip-path: polygon(0% 90%, 20% 30%, 60% 0%, 100% 90%, 50% 100%);
+    }
+
+    .logo {
+      background-image: url('/assets/skills/illustrator.png');
+    }
+  }
+
+  .skill-content {
+    h1 {
+      background: linear-gradient(80deg, #FF9B00 0%, #ffffff 50%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+#github {
+  .stone-wrap {
+    // FIXME: Automate: Create CSS function to apply alpha to given color
+    filter: drop-shadow(5px 0px 10px #333333CC) drop-shadow(-5px 0px 10px #333333CC);
+
+    .stone {
+      background-color: #333333;
+      clip-path: polygon(0% 90%, 20% 30%, 60% 0%, 100% 90%, 50% 100%);
+    }
+
+    .logo {
+      background-image: url('/assets/skills/github.png');
+    }
+  }
+
+  .skill-content {
+    h1 {
+      background: linear-gradient(80deg, #333333 0%, #ffffff 50%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.header-footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 30vh;
+  background-color: white;
+  clip-path: polygon(0% 10%, 10% 30%, 40% 40%, 70% 70%, 80% 40%, 100% 80%, 100% 100%, 0% 100%);
 }
