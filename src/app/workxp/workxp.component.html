@@ -95,142 +95,40 @@
 </div>
 
 <div class="skills-wrapper">
-  <!-- 🔶 Angular -->
-  <section id="angular">
-    <div class="stone-wrap">
-      <div class="stone"></div>
-      <div class="logo"></div>
+  <!-- 🔶 Skills turn dynamic -->
+  <section [id]="item.id" *ngFor="let item of skills">
+    <div class="stone-wrap" [style.filter]="'drop-shadow(5px 0px 10px ' + item.accentColor + 'CC) drop-shadow(-5px 0px 10px ' + item.accentColor + 'CC)'">
+      <div class="stone" [ngStyle]="{
+        'background-color': item.accentColor,
+        'clip-path': 'polygon(0% 90%, 20% 30%, 60% 0%, 100% 90%, 50% 100%)'
+      }"></div>
+      <div class="logo" [style.background-image]="'url(\'/assets/skills/' + item.id + '.png\')'"
+      ></div>
     </div>
     <div class="skill-content">
-      <h1>Angular 2 - 14</h1>
+      <h1 [ngStyle]="{
+        background: 'linear-gradient(80deg, ' + item.accentColor + ' 0%, #ffffff 50%, #FFFFFF 100%)',
+        '-webkit-background-clip': 'text',
+        '-webkit-text-fill-color': 'transparent'
+      }">{{ item.title }}</h1>
       <div class="scrolling-feats">
         <span>
-          Observables
-          &nbsp;•&nbsp;
-          Subscriptions
-          &nbsp;•&nbsp;
-          Async / Await
+          <ng-container *ngFor="let label of item.skillLine1; index as i">
+            {{label}}
+            <ng-container *ngIf="i+1 < item.skillLine1.length">
+              &nbsp;•&nbsp;
+            </ng-container>
+          </ng-container>
         </span>
       </div>
       <div class="scrolling-feats">
         <span>
-          Angular CLI
-          &nbsp;•&nbsp;
-          TypeScript
-          &nbsp;•&nbsp;
-          Strict types
-        </span>
-      </div>
-    </div>
-  </section>
-  <!-- 🔶 Sass -->
-  <section id="sass">
-    <div class="stone-wrap">
-      <div class="stone"></div>
-      <div class="logo"></div>
-    </div>
-    <div class="skill-content">
-      <h1>Sass - CSS</h1>
-      <div class="scrolling-feats">
-        <span>
-          BEM Methodology
-          &nbsp;•&nbsp;
-          Global variables
-          &nbsp;•&nbsp;
-          Mixins
-        </span>
-      </div>
-      <div class="scrolling-feats">
-        <span>
-          Media queries (Responsive design)
-          &nbsp;•&nbsp;
-          Flexbox
-          &nbsp;•&nbsp;
-          
-        </span>
-      </div>
-    </div>
-  </section>
-  <!-- 🔶 TypeScript -->
-  <section id="typescript">
-    <div class="stone-wrap">
-      <div class="stone"></div>
-      <div class="logo"></div>
-    </div>
-    <div class="skill-content">
-      <h1>TypeScript</h1>
-      <div class="scrolling-feats">
-        <span>
-          Template Literal Types
-          &nbsp;•&nbsp;
-          OOP
-          &nbsp;•&nbsp;
-          Optional chaining
-        </span>
-      </div>
-      <div class="scrolling-feats">
-        <span>
-          Inheritance
-          &nbsp;•&nbsp;
-          
-          &nbsp;•&nbsp;
-
-        </span>
-      </div>
-    </div>
-  </section>
-  <!-- 🔶 Illustrator -->
-  <section id="illustrator">
-    <div class="stone-wrap">
-      <div class="stone"></div>
-      <div class="logo"></div>
-    </div>
-    <div class="skill-content">
-      <h1>Illustrator</h1>
-      <div class="scrolling-feats">
-        <span>
-          SVG
-          &nbsp;•&nbsp;
-          Logo design
-          &nbsp;•&nbsp;
-          Paths simplification
-        </span>
-      </div>
-      <div class="scrolling-feats">
-        <span>
-          Image vectorization
-          &nbsp;•&nbsp;
-          
-          &nbsp;•&nbsp;
-
-        </span>
-      </div>
-    </div>
-  </section>
-  <!-- 🔶 Github -->
-  <section id="github">
-    <div class="stone-wrap">
-      <div class="stone"></div>
-      <div class="logo"></div>
-    </div>
-    <div class="skill-content">
-      <h1>Github</h1>
-      <div class="scrolling-feats">
-        <span>
-          Cherry-picking
-          &nbsp;•&nbsp;
-          Interactive rebase
-          &nbsp;•&nbsp;
-          Stashes
-        </span>
-      </div>
-      <div class="scrolling-feats">
-        <span>
-          Reflog
-          &nbsp;•&nbsp;
-          Branch handling
-          &nbsp;•&nbsp;
-          Atomic commits
+          <ng-container *ngFor="let label of item.skillLine2; index as i">
+            {{label}}
+            <ng-container *ngIf="i+1 < item.skillLine2.length">
+              &nbsp;•&nbsp;
+            </ng-container>
+          </ng-container>
         </span>
       </div>
     </div>
