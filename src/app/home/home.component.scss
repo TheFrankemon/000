@@ -4,7 +4,10 @@
 }
 
 .blurry {
-  filter: blur(5px);
+  .titles,
+  img {
+    opacity: 0;
+  }
 }
 
 .header {
@@ -32,6 +35,7 @@
       height: 100%;
       width: auto;
       right: 90px;
+      transition: opacity ease-in-out 0.5s;
     }
 
     .content {
@@ -86,6 +90,7 @@
       margin-left: 50px;
       position: absolute;
       z-index: 5; //in-between floating icons
+      transition: opacity ease-in-out 0.5s;
   
       .f-hello, .f-name {
         color: var(--text-color-light);
@@ -136,6 +141,7 @@
       box-sizing: border-box;
       margin-top: 2px;
       transition: box-shadow .25s, border .25s;
+      cursor: pointer;
   
       &:hover {
         box-shadow: inset -4px 4px 9px 0px black;
