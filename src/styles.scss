@@ -43,9 +43,16 @@
   #{--dark-background-color}: #242424;
 }
 
-/* You can add global styles to this file, and also import other style files */
 * {
   font-family: 'Raleway', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 }
 
 body {
