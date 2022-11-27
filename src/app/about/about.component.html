@@ -5,14 +5,24 @@
   </h1>
 </div>
 <div class="core-description">
+  <p>
+    I'm a Computer Science Engineer. After participating in multiple web projects I got completely hooked in the looks of
+    user interfaces and what I could do to make them evolve into something greater.
+  </p>
+  <br/>
   <h2 class="description-text">
-    I have mastered my notion of style and coding on a Attention-To-Detail approach,
-    which mostly leads projects and digital products to meet strong high-quality standards.
+    I'm continously mastering my notion of style and coding on a Attention-To-Detail approach,
+    to lead projects and digital products to meet strong high-quality standards.
   </h2>
+  <br/>
+  <p>
+    I love videogames <a href="javascript:void(0)">(own section - coming soon)</a>.
+    And I love urban traveling - maybe that's why I can't stop quoting plane tickets for future destinations.
+  </p>
 </div>
 <div class="why-container">
   <div class="why-panel">
-    <div class="badui">
+    <div class="badui dark-panel">
 
       <div class="website-example" [class.new-ui]="enableCSS">
         <b>Back when I was a noobie</b><b> - January 20, 2013</b>
@@ -30,20 +40,22 @@
         <div class="toggle-line"></div>
       </div>
     </div>
-    <p class="why-panel-label">I am addicted to pixel-perfection and eye-pleasant UI</p>
+    <p class="why-panel-label">I am addicted to pixel-perfection and eye-pleasant User Interfaces.</p>
+  </div>
+  <div class="why-panel">
+    <p class="why-panel-label">Currently I'm working {{remoteWork ? 'remotely' : ''}} from</p>
+    <div class="dark-panel location">
+      <h3>📍 {{ currentLocation }}<br>({{ currentTimezone }})</h3>
+    </div>
   </div>
   <div class="why-panel">
     <p class="why-panel-label">As of {{ currentDay | date: 'mediumDate' }},<br>I have aprox.</p>
-    <div class="img clock-wrapper">
+    <div class="dark-panel clock-wrapper">
       <div class="clock">
         <div class="txt">{{ elapsedWorkXP }}</div>
       </div>
     </div>
     <p class="why-panel-label">of work experience on Web development</p>
-  </div>
-  <div class="why-panel">
-    <div class="img"></div>
-    <p class="why-panel-label">I don't know yet</p>
   </div>
 </div>
 <div class="header-footer">

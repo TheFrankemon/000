@@ -26,21 +26,38 @@
   background-color: #000;
   color: #FFFFFF;
   clip-path: polygon(0% 40%, 40% 10%, 60% 30%, 100% 0%, 100% 100%, 60% 80%, 20% 90%, 0% 70%);
-  margin-top: -90px;
-  padding: 100px 120px 70px;
+  margin-top: -140px;
+  padding: 130px 180px 60px;
+
+
+  .description-text, p {
+    transform: rotate(2deg);
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  p a {
+    color: #4b2fda;
+
+    &:hover {
+      color: #685ab0;
+    }
+  }
 
   .description-text {
     font-size: 24px;
-    transform: rotate(3deg);
   }
 }
 
 .why-container {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 7%;
-  margin-top: 70px;
-  margin-bottom: 250px;
+  margin-top: 50px;
+  margin-bottom: 160px;
 
   .why-panel {
     display: flex;
@@ -55,9 +72,7 @@
     color: white;
   }
 
-  .img,
-  .badui {
-    width: 100%;
+  .dark-panel {
     background-color: #00000030;
   }
 
@@ -118,14 +133,11 @@
     }
   }
 
-  .img {
-    height: 150px;
-  }
-
   .clock-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 150px;
 
     .clock {
       padding: 10px;
@@ -147,6 +159,20 @@
     }
   }
 
+  .location {
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .location,
+  .intro,
+  .hobbies {
+    padding: 20px;
+  }
+
+  .hobbies {
+    margin-top: 20px;
+  }
 }
 
 .website-example {

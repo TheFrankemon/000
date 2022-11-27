@@ -9,6 +9,9 @@ export class AboutComponent implements OnInit {
 
   enableCSS = false;
   leapYears = [2020, 2024, 2028, 2032, 2036, 2040];
+  currentLocation = 'Santa Cruz, Bolivia';
+  currentTimezone = 'GMT-4';
+  remoteWork = true;
 
   constructor() { }
 
