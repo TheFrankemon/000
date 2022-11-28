@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { WorkxpComponent } from './workxp/workxp.component';
+import { CopyrightFooterComponent } from './copyright-footer/copyright-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    WorkxpComponent
+    WorkxpComponent,
+    CopyrightFooterComponent
   ],
   imports: [
     BrowserModule,

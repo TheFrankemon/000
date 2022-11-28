@@ -1,0 +1,17 @@
+:host {
+  background-color: #FFFFFF;
+  z-index: 1;
+  padding-top: 100px;
+}
+
+.cr-footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.dotg-disclaimer {
+  font-size: 10px;
+}
