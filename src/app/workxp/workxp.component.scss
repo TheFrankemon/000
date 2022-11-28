@@ -6,14 +6,14 @@
   position: relative;
 }
 
-.about-header {
+.workxp-header {
   display: flex;
   height: 30vh;
   background-color: white;
   clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 60% 80%, 40% 50%, 0% 100%);
 }
 
-.about-wrapper {
+.workxp-wrapper {
   display: flex;
   margin: 40px 180px;
 }
@@ -186,22 +186,20 @@
 }
 
 .skills-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 30vh;
+  margin: 120px 250px 30vh;
+  padding: 60px;
+  gap: 40px;
 
   section {
     display: flex;
     align-items: center;
-    margin: 20px;
 
     &:nth-child(odd) {
-      margin-left: 20%;
+      align-self: flex-end;
     }
     &:nth-child(even) {
-      margin-left: -20%;
+      align-self: flex-start;
     }
 
     .stone-wrap {
