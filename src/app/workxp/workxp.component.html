@@ -8,43 +8,18 @@
   <div class="work">
     <div class="xp-section">
       <h1 class="opacity-title">Work</h1>
-      <div class="xp-item" id="witco">
+
+      <!-- 🔶 Work turn dynamic -->
+      <div class="xp-item" [id]="item.id" *ngFor="let item of jobs">
         <div class="img-holder"></div>
         <div class="xp-content">
-          <h2 class="xp-title"><div class="flag"></div>Witco (formerly Monbuilding)</h2>
-          <p class="xp-dates">Sep 2018 - Present</p>
+          <h2 class="xp-title"><div class="flag"></div>{{ item.title }}</h2>
+          <p class="xp-dates">{{ item.dates }}</p>
           <p class="xp-detail">
-            Lead Web UI Developer on Sass + Angular.<br/>Frontend Developer on Angular.
-          </p>
-        </div>
-      </div>
-      <div class="xp-item" id="ancestral">
-        <div class="img-holder"></div>
-        <div class="xp-content">
-          <h2 class="xp-title"><div class="flag"></div>Ancestral Gods</h2>
-          <p class="xp-dates">Jan 2018 - Jun 2018</p>
-          <p class="xp-detail">
-            Videogame developer trainee on Unity3D & C#.
-          </p>
-        </div>
-      </div>
-      <div class="xp-item" id="impeller">
-        <div class="img-holder"></div>
-        <div class="xp-content">
-          <h2 class="xp-title"><div class="flag"></div>Impeller Studios</h2>
-          <p class="xp-dates">Jul 2016 - Jul 2017</p>
-          <p class="xp-detail">
-            Co-leader of local web videogame development team, using Phaser and team training on Git.
-          </p>
-        </div>
-      </div>
-      <div class="xp-item" id="assure">
-        <div class="img-holder"></div>
-        <div class="xp-content">
-          <h2 class="xp-title"><div class="flag"></div>AssureSoft</h2>
-          <p class="xp-dates">Jan 2017 - Feb 2017</p>
-          <p class="xp-detail">
-            Research Assistant intern on a CI tools POC.<br/>Angular Material 2 web components development.
+            <ng-container *ngFor="let line of item.detail; index as i">
+              • {{line}}
+              <br *ngIf="i < item.detail.length"/>
+            </ng-container>
           </p>
         </div>
       </div>
@@ -53,26 +28,23 @@
   <div class="nowork">
     <div class="xp-section study">
       <h1 class="opacity-title">Studies</h1>
-      <div class="xp-item" id="upb">
+
+      <!-- 🔶 Studies turn dynamic -->
+      <div class="xp-item" [id]="item.id" *ngFor="let item of studies">
         <div class="img-holder"></div>
         <div class="xp-content">
-          <h2 class="xp-title">Universidad Privada Boliviana</h2>
-          <p class="xp-dates">Feb 2013 - Dec 2018</p>
+          <h2 class="xp-title">{{ item.title }}</h2>
+          <p class="xp-dates">{{ item.dates }}</p>
           <p class="xp-detail">
-            <span class="gold-label">Computer Software Engineer</span><br/>
-            Honorable mention on directed-work thesis<br/>
-            Career representative on University's 2016 student society
-          </p>
-        </div>
-      </div>
-      <div class="xp-item" id="cba">
-        <div class="img-holder"></div>
-        <div class="xp-content">
-          <h2 class="xp-title">Centro Boliviano Americano</h2>
-          <p class="xp-dates">Jan 2004 - Feb 2008</p>
-          <p class="xp-detail">
-            Certificate of Intermediate-Superior Program for Teenagers.<br/>
-            Completion Diploma of Children’s English Program.
+            <ng-container *ngFor="let line of item.detail; index as i">
+              <ng-container *ngIf="item.firstElemIsGold && i === 0 else commonLabel">
+                <span class="gold-label">• {{line}}</span>
+              </ng-container>
+              <ng-template #commonLabel>
+                • {{line}}
+              </ng-template>
+              <br *ngIf="i < item.detail.length"/>
+            </ng-container>
           </p>
         </div>
       </div>
