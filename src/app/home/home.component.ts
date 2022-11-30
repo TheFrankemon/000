@@ -7,7 +7,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  public window = window;
   blurryFranco = false;
 
   constructor() { }
