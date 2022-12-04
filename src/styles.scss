@@ -1,46 +1,25 @@
 @mixin colorVars {
-  /* Base colors */
-  #{--primary-color}: #4DC1D5;
-  #{--secondary-color}: #FE0900;
-  #{--third-color}: #FDB813;
+  /* Section colors */
+  #{--main-bg-color}: linear-gradient(3deg, #000000 10%, #747474 75%, #dfdfdf 97%, #ffffff 100%);
+  #{--sec-1-color}: #110066BF;
+  #{--sec-2-color}: #061292D1;
 
   /* Base monochromatic colors */
-  #{--bw-dark-color}: #232626;
-  #{--bw-mid-dark-color}: #828585;
-  #{--bw-mid-color}: #E1E3E3;
-  #{--bw-mid-light-color}: #F9F9F9;
-  #{--bw-light-color}: #FFFFFF;
-
-  /* Status colors */
-  #{--success-color}: #4CD964;
-  #{--warning-color}: #FDB813;
-  #{--disabled-color}: var(--bw-mid-dark-color);
-  #{--alert-color}: #FE0900;
+  #{--dark-color}: #1F2020;
+  #{--mid-color}: #E1E3E3;
+  #{--light-color}: #FFFFFF;
 
   /* Text color variables */
-  #{--text-color-dark}: var(--bw-dark-color);
-  #{--text-color-mid}: var(--bw-mid-dark-color);
-  #{--text-color-light}: var(--bw-light-color);
-
-  /* Border color variables */
-  #{--border-color-dark}: var(--bw-mid-dark-color);
-  #{--border-color-mid}: var(--bw-mid-color);
-  #{--border-color-light}: var(--bw-light-color);
-
-  /* Background color variables */
-  #{--background-color-dark}: var(--bw-mid-dark-color);
-  #{--background-color-mid-dark}: var(--bw-mid-color);
-  #{--background-color-mid-light}: var(--bw-mid-light-color);
-  #{--background-color-light}: var(--bw-light-color);
-
-  /* Icon color variables */
-  #{--icon-color-dark}: var(--bw-mid-dark-color);
-  #{--icon-color-mid}: var(--bw-mid-color);
-  #{--icon-color-light}: var(--bw-light-color);
+  #{--text-dark}: var(--dark-color);
+  #{--text-light}: var(--light-color);
 
   /* Element-specific color variables */
-  #{--scrollbar-color}: #00000033;
-  #{--dark-background-color}: #242424;
+  #{--about-panel-bg-color}: #00000030;
+  #{--workxp-panel-bg-color}: #FFFFFF26;
+
+  #{--gold-color}: linear-gradient(15deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+
+  #{--section-hf-bg-color}: #FFFFFF;
 }
 
 * {
@@ -68,4 +47,5 @@ h1.fkmn-section-title {
   transform: rotate(-11deg);
   margin: 100px 50px 0px;
   font-size: 50px;
+  color: var(--text-dark);
 }

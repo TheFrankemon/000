@@ -1,7 +1,7 @@
 nav {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: var(--light-color);
   filter: blur(50%);
   position: fixed;
   z-index: 2;
