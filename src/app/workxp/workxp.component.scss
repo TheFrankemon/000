@@ -187,9 +187,10 @@
 
 .skills-wrapper {
   align-items: center;
-  margin: 120px 250px 30vh;
+  margin: 120px 20% 30vh;
   padding: 60px;
   gap: 40px;
+  transform: skewY(8deg);
 
   section {
     display: flex;
@@ -206,30 +207,34 @@
       position: relative;
 
       .stone {
-        width: 200px;
-        height: 200px;
+        width: 140px;
+        height: 140px;
       }
 
       .logo {
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         position: absolute;
         background-size: contain;
-        top: 60px;
-        left: 40px;
+        top: 45px;
+        left: 25px;
       }
     }
   }
 }
 
 .skill-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+
   h1 {
     font-size: 50px;
     background: var(--text-light);
   }
 
   .scrolling-feats {
-    margin-top: 20px;
     margin-left: 40px;
 
     span {
