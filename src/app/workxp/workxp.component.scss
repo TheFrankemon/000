@@ -1,6 +1,7 @@
 :host {
   min-height: 100vh;
   background-color: var(--sec-2-color);
+  backdrop-filter: blur(10px);
   z-index: 1;
   margin-top: -1px;
   position: relative;

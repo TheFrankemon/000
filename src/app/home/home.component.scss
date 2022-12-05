@@ -16,6 +16,12 @@
   width: 100vw;
   background: var(--light-color);
   background: var(--main-bg-color);
+  transition: background-position ease-in-out 1s;
+
+  &.high-contrast {
+    background: var(--main-bg-color-later);
+    background-position: 0px;
+  }
 
   .dsg-mode {
     display: flex;
