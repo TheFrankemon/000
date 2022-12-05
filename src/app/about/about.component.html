@@ -25,12 +25,16 @@
     <div class="badui dark-panel">
 
       <div class="website-example" [class.new-ui]="enableCSS">
-        <b>Back when I was a noobie</b><b> - January 20, 2013</b>
+        <b>This small section MUST be
+          <span [style.font-style]="enableCSS ? 'italic': 'unset'">revamped</span>
+        </b><b> - October 17, 2022</b>
         <div class="dumb-container">
-          <b>The Basic Timeline</b>
+          <b>A{{ enableCSS ? ' not so ' : 'n' }} average section</b>
           <img [src]="'assets/orange'+ (enableCSS ? '.png' : '.jpg')">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            I mean, small things like this should be ignored as they are close to unsignificance.
+            <br/><br *ngIf="enableCSS"/>
+            I could have used Lorem ipsum here but perhaps a certain level of detail can be reached by dropping a sentence or two. It filled the textbox, at least 😅.
           </p>
         </div>
       </div>
