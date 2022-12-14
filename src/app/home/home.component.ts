@@ -1,18 +1,16 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostBinding, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
+  @HostBinding('id') id = 'home';
   blurryFranco = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   @HostListener('window:scroll') // for window scroll events
   onScroll() {
