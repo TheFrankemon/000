@@ -1,4 +1,6 @@
-import { Component, HostBinding, HostListener } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ScrollListenerService } from '../scroll-listener.service';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +11,17 @@ export class HomeComponent {
 
   @HostBinding('id') id = 'home';
   blurryFranco = false;
+  offsetSurpassedSub: Subscription;
 
-  constructor() { }
-
-  @HostListener('window:scroll') // for window scroll events
-  onScroll() {
-    const verticalOffset = window.pageYOffset;
-    this.blurryFranco = verticalOffset > 700;
+  constructor(
+    private scrollListener: ScrollListenerService
+  ) {
+    this.offsetSurpassedSub = this.scrollListener.offsetSurpassed$.subscribe(val => {
+      this.blurryFranco = val;
+    });
   }
 
+  ngOnDestroy() {
+    this.offsetSurpassedSub?.unsubscribe();
+  }
 }
