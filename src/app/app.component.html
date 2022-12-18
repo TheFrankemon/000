@@ -1,11 +1,13 @@
 <nav>
-  <object type="image/svg+xml" data="assets/f-logo.svg"></object>
-  <span class="version">v1.0.0</span>
+  <div class="navbar-icon">
+    <object type="image/svg+xml" data="assets/f-logo.svg"></object>
+    <span class="version">v1.0.0</span>
+  </div>
 
-  <ul *ngIf="showButtons">
-    <li> <a [routerLink]="['/']" fragment="home"> Home </a></li>
-    <li> <a [routerLink]="['/']" fragment="about"> About </a></li>
-    <li> <a [routerLink]="['/']" fragment="work"> Work </a></li>
-  </ul>
+  <div class="navbar-button-wrapper" *ngIf="showButtons">
+    <div class="navbar-button" [routerLink]="['/']" *ngFor="let item of routes" [fragment]="item.fragment">
+      {{ item.title }}
+    </div>
+  </div>
 </nav>
 <router-outlet></router-outlet>

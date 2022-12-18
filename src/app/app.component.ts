@@ -13,6 +13,12 @@ export class AppComponent {
   showButtons = false;
   offsetSurpassedSub:Subscription;
 
+  routes = [
+    {fragment: 'home', title: 'Home'},
+    {fragment: 'about', title: 'Why Franco?'},
+    {fragment: 'work', title: 'Experience/Skills'},
+  ];
+
   constructor(
     private scrollListener: ScrollListenerService
   ) {
