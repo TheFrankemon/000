@@ -4,7 +4,7 @@
     <span class="version">v1.0.0</span>
   </div>
 
-  <div class="navbar-button-wrapper" *ngIf="showButtons">
+  <div class="navbar-button-wrapper" [class.show-buttons]="showButtons">
     <div class="navbar-button" [routerLink]="['/']" *ngFor="let item of routes" [fragment]="item.fragment">
       {{ item.title }}
     </div>
