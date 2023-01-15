@@ -16,7 +16,7 @@ export class AppComponent {
   routes = [
     {fragment: 'home', title: 'Home'},
     {fragment: 'about', title: 'Why Franco?'},
-    {fragment: 'work', title: 'Experience/Skills'},
+    {fragment: 'work', title: 'Experience & Skills'},
   ];
 
   constructor(
