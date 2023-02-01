@@ -2,8 +2,7 @@
   /* Section colors */
   #{--main-bg-color}:
     radial-gradient(circle at 80% 120%, #0AC0B7 20%, #00000000 60%),
-    radial-gradient(circle at 60% 110%, #374fff 30%, #00000000 75%),
-    linear-gradient(10deg, #000000 10%, #232626 100%);
+    radial-gradient(circle at 60% 110%, #374fff 30%, #00000000 75%);
 
   #{--main-bg-color-later}:
     radial-gradient(farthest-corner at 70% 90%, #FFFFFF 0%, transparent 50%),

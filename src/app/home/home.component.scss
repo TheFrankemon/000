@@ -14,6 +14,17 @@
   }
 }
 
+.anim-gradient {
+  position: fixed;
+  top: -70vh; right: -70vw; bottom: -70vh; left: -70vw;
+  background-image: linear-gradient(300deg, #e804af 20%, #232626 60%);
+  animation: rotate-gradient linear 10s infinite;
+}
+
+@keyframes rotate-gradient {
+  to { transform: rotate(360deg) }
+}
+
 .header {
   position: fixed;
   height: 100vh;
