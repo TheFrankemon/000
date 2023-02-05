@@ -120,7 +120,7 @@ export class WorkxpComponent implements OnInit {
       'Stashes',
     ],
     skillLine2: [
-      'Image vectorization',
+      'CLI vs GUI',
     ]
   }];
 
