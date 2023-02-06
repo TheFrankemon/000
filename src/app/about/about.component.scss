@@ -11,9 +11,7 @@
   min-height: 100vh;
   background-color: var(--sec-1-color);
   backdrop-filter: blur(10px);
-  z-index: 1;
-  margin-top: 100vh;
-  position: relative;
+  margin-top: -1px;
 }
 
 .about-header {
