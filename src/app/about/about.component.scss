@@ -277,3 +277,31 @@
   background-color: var(--section-hf-bg-color);
   clip-path: polygon(0% 70%, 30% 90%, 50% 40%, 70% 70%, 80% 60%, 100% 70%, 100% 100%, 0% 100%);
 }
+
+// MOBILE
+@media screen and (max-width: 480px) {
+  .core-description {
+    clip-path: polygon(0% 25%, 40% 10%, 60% 25%, 100% 0%, 100% 100%, 60% 80%, 20% 90%, 0% 80%);
+    padding: 170px 30px 120px;
+
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .description-text {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+
+  .why-container {
+    flex-direction: column;
+    gap: 80px;
+
+    .clock-wrapper .txt {
+      animation: none;
+      font-weight: normal;
+    }
+  }
+}

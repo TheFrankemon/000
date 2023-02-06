@@ -16,7 +16,8 @@
 
 .workxp-wrapper {
   display: flex;
-  margin: 40px 180px;
+  flex-wrap: wrap;
+  margin: 40px 12vw;
 }
 
 .work,
@@ -92,7 +93,7 @@
 }
 
 .xp-content {
-  padding: 0px 20px;
+  padding-left: 20px;
   border-left: 1px solid var(--text-light);
 
   .xp-title {
@@ -251,4 +252,60 @@
   height: 30vh;
   background-color: var(--section-hf-bg-color);
   clip-path: polygon(0% 10%, 10% 30%, 40% 40%, 70% 70%, 80% 40%, 100% 80%, 100% 100%, 0% 100%);
+}
+
+// MOBILE
+@media screen and (max-width: 480px) {
+  .workxp-wrapper {
+    margin: 40px 20px;
+  }
+
+  .xp-content {
+    padding-left: 10px;
+
+    .xp-title {
+      font-size: 15px;
+    }
+  }
+
+  .xp-item {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .img-holder {
+    width: 120px;
+    height: 72px;
+  }
+
+  .skills-wrapper {
+    margin: 150px 20px 30vh;
+    padding: 20px;
+
+    section .stone-wrap {
+      .stone {
+        width: 100px;
+        height: 100px;
+      }
+
+      .logo {
+        width: 65px;
+        height: 65px;
+        top: 32px;
+        left: 18px;
+      }
+    }
+  }
+
+  .skill-content {
+    margin-left: 10px;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    .scrolling-feats {
+      margin-left: 20px;
+    }
+  }
 }

@@ -1,25 +1,32 @@
 :host {
   display: flex;
+}
 
-  .sm-icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    margin-top: 2px;
-    transition: box-shadow .25s, border .25s;
-    cursor: pointer;
+.sm-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  transition: box-shadow .25s, border .25s;
+  cursor: pointer;
 
-    &:hover {
-      box-shadow: inset -4px 4px 9px 0px var(--dark-color);
-    }
+  &:hover {
+    box-shadow: inset -4px 4px 9px 0px var(--dark-color);
   }
+}
 
-  object {
-    pointer-events: none;
-    width: 48px;
-    height: 48px;
-    margin: 4px;
+object {
+  pointer-events: none;
+  width: 85%;
+  height: 85%;
+  margin: 4px;
+}
+
+// MOBILE
+@media screen and (max-width: 480px) {
+  .sm-icon-wrapper {
+    width: 32px;
+    height: 32px;
   }
 }

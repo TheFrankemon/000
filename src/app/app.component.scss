@@ -15,7 +15,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 130px;
+  margin-left: 10vw;
   cursor: pointer;
 
   object {
@@ -32,7 +32,7 @@ nav {
 .navbar-button-wrapper {
   display: flex;
   gap: 20px;
-  margin-left: 40px;
+  margin-left: 3vw;
   transform: rotate(-3deg);
   height: 0px;
   opacity: 0;
@@ -51,5 +51,18 @@ nav {
     &:hover {
       color: var(--mid-color);
     }
+  }
+}
+
+
+// MOBILE
+@media screen and (max-width: 480px) {
+  nav {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 10% 100%);
+  }
+
+  .navbar-icon object {
+    width: 40px;
+    height: 40px;
   }
 }

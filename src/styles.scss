@@ -51,8 +51,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1.fkmn-section-title {
-  transform: rotate(-11deg);
-  margin: 100px 50px 0px;
+  margin: 50px 50px 0px;
   font-size: 50px;
   color: var(--text-dark);
+}
+
+// MOBILE
+@media screen and (max-width: 480px) {
+  h1.fkmn-section-title {
+    margin: 50px 20px 0px;
+    font-size: 40px;
+    line-height: 1;
+  }
 }
