@@ -54,15 +54,18 @@ nav {
   }
 }
 
-
 // MOBILE
 @media screen and (max-width: 480px) {
   nav {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 10% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 10% 100%);
   }
 
   .navbar-icon object {
     width: 40px;
     height: 40px;
+  }
+
+  .navbar-button-wrapper {
+    margin: 0px 5vw;
   }
 }

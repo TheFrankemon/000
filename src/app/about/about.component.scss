@@ -8,6 +8,7 @@
 }
 
 :host {
+  position: relative;
   min-height: 100vh;
   background-color: var(--sec-1-color);
   backdrop-filter: blur(10px);
