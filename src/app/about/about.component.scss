@@ -64,6 +64,7 @@
     flex-direction: column;
     gap: 20px;
     width: 300px;
+    position: relative;
   }
 
   .why-panel-label {
@@ -83,53 +84,67 @@
     justify-content: flex-end;
     height: 300px;
     position: relative;
+  }
 
-    .toggle {
-      width: 50px;
-      height: 30px;
-      border-radius: 15px;
-      background: var(--about-panel-bg-color);
-      background: linear-gradient(0deg, var(--about-panel-bg-color) 00%, var(--about-panel-bg-color) 49.99%, #00000000 50%, #00000000 100%);
-      margin-bottom: -15px;
-      position: absolute;
-      cursor: pointer;
+  .toggle {
+    width: 50px;
+    height: 30px;
+    background-color: #FFFFFFB3;
+    position: absolute;
+    bottom: 80px;
+    left: 130px;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px 4px var(--light-color);
+    transition: transform ease-in-out 0.25s;
 
-      &:hover {
-        .toggle-thingy {
-          transform: scale(1.5);
-        }
-      }
+    &:hover {
+      transform: scale(1.2);
+    }
 
-      &.activated {
-        .toggle-thingy {
-          left: 30px;
-          background-color: var(--light-color);
-        }
-
-        .toggle-line {
-          border-color: var(--light-color);
-        }
-      }
-
+    &.activated {
       .toggle-thingy {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: gray;
-        bottom: 10px;
-        left: 8px;
-        transition: all ease-in-out 0.25s;
+        left: 22px;
       }
 
-      .toggle-line {
-        position: absolute;
-        width: 20px;
-        bottom: 14px;
-        left: 15px;
-        border-top: 1px solid gray;
-        transition: all ease-in-out 0.25s;
+      .toggle-light-shadow {
+        filter: drop-shadow(var(--success-color) 0px -2px 3px) drop-shadow(var(--success-color) 0px 2px 3px);
       }
+
+      .toggle-light {
+        background-color: var(--success-color);
+      }
+    }
+
+    .toggle-thingy {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: var(--light-color);
+      top: 5px;
+      left: 5px;
+      transition: all ease-in-out 0.25s;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 22%, 63% 50%, 100% 78%, 100% 100%, 0% 100%, 0% 0%);
+    }
+
+    .toggle-light-base {
+      position: absolute;
+      width: 14px;
+      height: 30px;
+      background-color: var(--light-color);
+      right: 0px;
+      clip-path: polygon(0% 50%, 50% 33%, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 67%);
+    }
+
+    .toggle-light {
+      position: absolute;
+      width: 10px;
+      height: 14px;
+      background-color: var(--mid-color);
+      top: 8px;
+      right: 2px;
+      box-shadow: 0px 0px 6px 1px var(--mid-color);
+      transition: all ease-in-out 0.25s;
+      clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 50%);
     }
   }
 
@@ -177,7 +192,7 @@
 }
 
 .website-example {
-  background-color: var(--light-color);
+  background-color: #FFFFFFEE;
   margin: 20px;
   height: 100%;
 
@@ -242,7 +257,7 @@
 
   .dumb-container {
     margin: 15px;
-    width: 50%;
+    width: 60%;
     border-width: 1px;
     box-shadow: 4px 4px 0px 0px var(--light-color);
 
@@ -257,7 +272,7 @@
       right: -20px;
       transform: scale(2.5);
       filter: blur(2px);
-      opacity: 0.4;
+      opacity: 0.7;
     }
 
     p {

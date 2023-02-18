@@ -38,13 +38,17 @@
           </p>
         </div>
       </div>
+    </div>
 
-      <div class="toggle" [class.activated]="enableCSS" (click)="toggleCSS()">
-        <div class="toggle-thingy"></div>
-        <div class="toggle-line"></div>
+    <div class="toggle" [class.activated]="enableCSS" (click)="toggleCSS()">
+      <div class="toggle-thingy"></div>
+      <div class="toggle-light-base"></div>
+      <div class="toggle-light-shadow">
+        <div class="toggle-light"></div>
       </div>
     </div>
-    <p class="why-panel-label">I am addicted to pixel-perfection and eye-pleasant User Interfaces.</p>
+
+    <p class="why-panel-label">I am addicted to accomplish pixel-perfect eye-pleasant User Interfaces.</p>
   </div>
   <div class="why-panel">
     <p class="why-panel-label">Currently I'm working {{remoteWork ? 'remotely' : ''}} from</p>
