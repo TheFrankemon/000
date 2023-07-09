@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { WorkxpComponent } from './workxp/workxp.component';
 import { CopyrightFooterComponent } from './copyright-footer/copyright-footer.component';
 import { SmIconsComponent } from './sm-icons/sm-icons.component';
+import { PassportComponent } from './passport/passport.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SmIconsComponent } from './sm-icons/sm-icons.component';
     AboutComponent,
     WorkxpComponent,
     CopyrightFooterComponent,
-    SmIconsComponent
+    SmIconsComponent,
+    PassportComponent
   ],
   imports: [
     BrowserModule,
