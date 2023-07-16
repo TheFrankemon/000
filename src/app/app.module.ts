@@ -9,6 +9,7 @@ import { WorkxpComponent } from './workxp/workxp.component';
 import { CopyrightFooterComponent } from './copyright-footer/copyright-footer.component';
 import { SmIconsComponent } from './sm-icons/sm-icons.component';
 import { PassportComponent } from './passport/passport.component';
+import { PsTrophiesComponent } from './ps-trophies/ps-trophies.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PassportComponent } from './passport/passport.component';
     WorkxpComponent,
     CopyrightFooterComponent,
     SmIconsComponent,
-    PassportComponent
+    PassportComponent,
+    PsTrophiesComponent
   ],
   imports: [
     BrowserModule,

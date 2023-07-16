@@ -10,19 +10,23 @@ export class PassportComponent implements OnInit {
   categories = [{
     name: 'PS Trophies',
     bgImage: 'trophies.jpg',
-    locked: false
+    locked: false,
+    route: 'pstrophies'
   }, {
     name: 'Music Library',
     bgImage: 'music.jpg',
-    locked: true
+    locked: true,
+    route: 'music'
   }, {
     name: 'Countries',
     bgImage: 'countries.jpg',
-    locked: true
+    locked: true,
+    route: 'countries'
   }, {
     name: 'Food',
     bgImage: 'food.jpg',
-    locked: true
+    locked: true,
+    route: 'food'
   }]
 
   constructor() { }

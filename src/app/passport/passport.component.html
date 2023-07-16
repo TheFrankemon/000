@@ -6,6 +6,7 @@
     class="passport-item"
     [class.disabled]="item.locked"
     [ngStyle]="{'background-image': 'url(\'assets/passport/'+ item.bgImage + '\')'}"
+    [routerLink]="[item.route]"
   >
     <h3>{{item.name}}</h3>
   </div>
