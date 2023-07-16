@@ -31,7 +31,6 @@
   justify-content: center;
   position: relative;
   transition: clip-path ease-in-out 0.25s;
-  cursor: pointer;
 
   &:nth-child(odd) {
     clip-path: polygon(0% 0%, 100% 5%, 90% 95%, 5% 100%);
@@ -49,8 +48,9 @@
     transition: backdrop-filter ease-in-out 0.25s;
   }
 
-  &:hover {
+  &:not(.disabled):hover {
     clip-path: polygon(0% 5%, 95% 0%, 95% 100%, 10% 95%);
+    cursor: pointer;
 
     h3 {
       font-size: 24px;
@@ -59,6 +59,10 @@
     &::before {
       backdrop-filter: blur(3px) brightness(0.8);
     }
+  }
+
+  &.disabled {
+   filter: grayscale(1); 
   }
 
   h3 {

@@ -1,7 +1,12 @@
 <h1 class="passport-title">Passport ➜</h1>
 
 <div class="passport-item-container">
-  <div *ngFor="let item of categories" class="passport-item" [ngStyle]="{'background-image': 'url(\'assets/passport/'+ item.bgImage + '\')'}">
+  <div
+    *ngFor="let item of categories"
+    class="passport-item"
+    [class.disabled]="item.locked"
+    [ngStyle]="{'background-image': 'url(\'assets/passport/'+ item.bgImage + '\')'}"
+  >
     <h3>{{item.name}}</h3>
   </div>
 </div>

@@ -8,17 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class PassportComponent implements OnInit {
 
   categories = [{
-    name: 'Countries',
-    bgImage: 'countries.jpg'
-  }, {
     name: 'PS Trophies',
-    bgImage: 'trophies.jpg'
+    bgImage: 'trophies.jpg',
+    locked: false
   }, {
     name: 'Music Library',
-    bgImage: 'music.jpg'
+    bgImage: 'music.jpg',
+    locked: true
+  }, {
+    name: 'Countries',
+    bgImage: 'countries.jpg',
+    locked: true
   }, {
     name: 'Food',
-    bgImage: 'food.jpg'
+    bgImage: 'food.jpg',
+    locked: true
   }]
 
   constructor() { }
