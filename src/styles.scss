@@ -7,9 +7,12 @@
   #{--main-bg-color-later}:
     radial-gradient(farthest-corner at 70% 90%, #FFFFFF 0%, transparent 50%),
     linear-gradient(10deg, #000000 10%, #747474 75%, #dfdfdf 97%, #FFFFFF 100%);
-  
-  #{--sec-1-color}: #110066C2;
-  #{--sec-2-color}: #00123EC2;
+
+  #{--main-bg-color-ps}: radial-gradient(circle at 70% 250%, #374fff 0%, #292929 90%);
+
+  #{--section1-bg-color}: #110066C2;
+  #{--section2-bg-color}: #00123EC2;
+  #{--section-break-bg-color}: #FFFFFF;
 
   /* Base monochromatic colors */
   #{--dark-color}: #1F2020;
@@ -27,7 +30,6 @@
   #{--gold-color}: linear-gradient(15deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   #{--success-color}: #0AC0B7;
 
-  #{--section-hf-bg-color}: #FFFFFF;
 }
 
 * {

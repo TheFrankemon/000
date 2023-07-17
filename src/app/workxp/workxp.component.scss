@@ -1,7 +1,7 @@
 :host {
   position: relative;
   min-height: 100vh;
-  background-color: var(--sec-2-color);
+  background-color: var(--section2-bg-color);
   backdrop-filter: blur(10px);
   margin-top: -1px;
 }
@@ -9,7 +9,7 @@
 .workxp-header {
   display: flex;
   height: 30vh;
-  background-color: var(--section-hf-bg-color);
+  background-color: var(--section-break-bg-color);
   clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 60% 80%, 40% 50%, 0% 100%);
 }
 
@@ -249,7 +249,7 @@
   bottom: 0px;
   width: 100%;
   height: 30vh;
-  background-color: var(--section-hf-bg-color);
+  background-color: var(--section-break-bg-color);
   clip-path: polygon(0% 10%, 10% 30%, 40% 40%, 70% 70%, 80% 40%, 100% 80%, 100% 100%, 0% 100%);
 }
 
