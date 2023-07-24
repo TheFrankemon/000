@@ -1,1 +1,25 @@
-<h1 class="back-button" [routerLink]="['..']">⬅</h1>
+<div class="passport-header">
+  <h1 class="back-button" [routerLink]="['..']">⬅</h1>
+  <h1>PS Trophies</h1>
+</div>
+
+<div class="games-container">
+  <div class="game-item" *ngFor="let item of trophiesData">
+    <div class="game-item-img-wrapper">
+      <div class="game-item-img" [ngStyle]="{'background-image':'url(' + item.imgUrl + ')'}"></div>
+    </div>
+    <div class="game-item-info">
+      <div class="game-item-title">
+        <h3>{{item.name}}</h3>
+        <span class="console-tag">{{item.console}}</span>
+      </div>
+
+      <div class="trophies-container">
+        <div *ngFor="let trophyType of getTrophiesObj(item.trophies)" class="trophy-item">
+          <span class="trophy-count">{{trophyType[1]}}</span>
+          <img src="/assets/trophy-{{trophyType[0]}}.png" alt="trophy"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import trophiesObj from './trophies.json';
 
 @Component({
   selector: 'app-ps-trophies',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PsTrophiesComponent implements OnInit {
 
+  trophiesData = trophiesObj;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getTrophiesObj(gameTrophies: {platinum: number, gold: number, silver: number, bronze: number; }) {
+    return Object.entries(gameTrophies);
   }
 
 }

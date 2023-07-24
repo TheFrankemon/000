@@ -6,10 +6,94 @@
   background: var(--main-bg-color-ps);
 }
 
+.passport-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 100px 50px 0px;
+
+  h1 {
+    font-size: 50px;
+    color: var(--text-light);
+  }
+}
+
 .back-button {
   align-self: flex-start;
-  margin: 100px 50px 0px;
-  font-size: 50px;
-  color: var(--text-light);
   cursor: pointer;
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 120px;
+}
+
+.game-item {
+  display: flex;
+  gap: 10px;
+}
+
+.game-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: skew(-5deg, 352deg);
+  background-color: var(--workxp-panel-bg-color);
+  padding: 20px;
+  gap: 10px;
+}
+
+.game-item-img {
+  width: 87px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  transform: rotate(5deg);
+}
+
+.game-item-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+
+  h3 {
+    color: var(--text-light);
+  }
+
+  .console-tag {
+    background-color: var(--dark-color);
+    color: var(--text-light);
+    padding: 4px;
+    font-size: 10px;
+  }
+}
+
+.trophies-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
+  .trophy-item {
+    display: flex;
+    gap: 5px;
+    position: relative;
+
+    .trophy-count {
+      font-size: 32px;
+      font-weight: bold;
+      color: var(--text-light);
+      text-shadow: -6px -3px var(--dark-color);
+    }
+
+    img {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: -15px;
+      z-index: -1;
+    }
+  }
 }
