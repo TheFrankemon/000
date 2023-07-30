@@ -1,21 +1,517 @@
 [{
-  "name": "Assassin's Creed IV: Black Flag",
-  "console": "PS3",
-  "imgUrl": "https://images.heb.com/is/image/HEBGrocery/prd-medium/001723635.jpg",
+  "name": "Need for Speed Heat",
+  "console": "PS4",
+  "imgUrl": "https://media.azadea.com/i/davinci/85_70768_000__101__01?$prd_large$&fmt=auto",
+  "progress": 12,
   "trophies": {
     "platinum": 0,
     "gold": 0,
     "silver": 0,
+    "bronze": 8
+  }
+}, {
+  "name": "Mafia II: Definitive Edition",
+  "console": "PS4",
+  "imgUrl": "https://dixgamer.com/wp-content/uploads/2020/09/Mafia-Trilogy.jpg",
+  "progress": 34,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 4,
+    "bronze": 23
+  }
+}, {
+  "name": "Tony Hawk's Pro Skater 1 + 2",
+  "console": "PS4",
+  "imgUrl": "https://images.pushsquare.com/9e5ead61cbc2a/tony-hawks-pro-skater-1-plus-2-cover.cover_300x.jpg",
+  "progress": 23,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 12
+  }
+}, {
+  "name": "Assassin's Creed Rogue Remastered",
+  "console": "PS4",
+  "imgUrl": "https://images.pushsquare.com/928a53cd0c0aa/assassins-creed-rogue-remastered-cover.cover_300x.jpg",
+  "progress": 17,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 10
+  }
+}, {
+  "name": "Assassin's Creed II",
+  "console": "PS4",
+  "imgUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNU8zXRrXCz7CoIeWMKQfQyvbAkbZPgpL0967WsaaVW6AQkuEK",
+  "progress": 62,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 11,
+    "bronze": 22
+  }
+}, {
+  "name": "Assassin's Creed Revelations",
+  "console": "PS4",
+  "imgUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNU8zXRrXCz7CoIeWMKQfQyvbAkbZPgpL0967WsaaVW6AQkuEK",
+  "progress": 2,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 1,
     "bronze": 0
+  }
+}, {
+  "name": "WATCH_DOGS 2",
+  "console": "PS4",
+  "imgUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTDSpxVS5eatQxcj4CNUkUeI7xmvVCEYbM5ULjpgW3-aD2XaThP",
+  "progress": 90,
+  "trophies": {
+    "platinum": 0,
+    "gold": 1,
+    "silver": 18,
+    "bronze": 30
+  }
+}, {
+  "name": "Cyberpunk 2077",
+  "console": "PS4",
+  "imgUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsplIfZZi5d8DE5H_8K-8gS3X8SNW_xnbY73WvsZpKjNZxdCFU",
+  "progress": 22,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 11
+  }
+}, {
+  "name": "Mafia: Definitive Edition",
+  "console": "PS4",
+  "imgUrl": "https://dixgamer.com/wp-content/uploads/2020/09/Mafia-Trilogy.jpg",
+  "progress": 1,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1
+  }
+}, {
+  "name": "Red Dead Redemption 2",
+  "console": "PS4",
+  "imgUrl": "https://z.nooncdn.com/products/tr:n-t_400/v1672084739/N18765185A_1.jpg",
+  "progress": 12,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 6
+  }
+}, {
+  "name": "Crash Bandicoot",
+  "console": "PS4",
+  "imgUrl": "https://images.pushsquare.com/d83c39ea17048/crash-bandicoot-n-sane-trilogy-cover.cover_300x.jpg",
+  "progress": 51,
+  "trophies": {
+    "platinum": 0,
+    "gold": 3,
+    "silver": 6,
+    "bronze": 7
+  }
+}, {
+  "name": "Crash Bandicoot 2: Cortex Strikes Back",
+  "console": "PS4",
+  "imgUrl": "https://images.pushsquare.com/d83c39ea17048/crash-bandicoot-n-sane-trilogy-cover.cover_300x.jpg",
+  "progress": 24,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 6,
+    "bronze": 4
+  }
+}, {
+  "name": "Crash Bandicoot: Warped",
+  "console": "PS4",
+  "imgUrl": "https://images.pushsquare.com/d83c39ea17048/crash-bandicoot-n-sane-trilogy-cover.cover_300x.jpg",
+  "progress": 4,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 3
+  }
+}, {
+  "name": "Overcooked",
+  "console": "PS4",
+  "imgUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpRS54NAPqAF5VlKe_hz69B_mpoFR08crtExf65l96XQETbdbO",
+  "progress": 68,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 3,
+    "bronze": 7
+  }
+}, {  "name": "Watch Dogs: Legion",
+  "console": "PS4",
+  "imgUrl": "https://www.euronics.ee/UserFiles/Products/Images/326280-490940-medium.png",
+  "progress": 12,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 6
+  }
+}, {
+  "name": "South Park: The Stick of Truth",
+  "console": "PS4",
+  "imgUrl": "https://m.media-amazon.com/images/I/51dwlxbLCgL._SL550_.jpg",
+  "progress": 21,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 13
+  }
+}, {
+  "name": "Sleeping Dogs: Definitive Edition",
+  "console": "PS4",
+  "imgUrl": "https://tejarra-media.s3.amazonaws.com/109472/conversions/item_XXL_9804032_11546395-medium.jpg",
+  "progress": 53,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 6,
+    "bronze": 36
+  }
+}, {
+  "name": "GTA IV",
+  "console": "PS3",
+  "imgUrl": "https://m.media-amazon.com/images/I/51zoLlyH75L._UL320_.jpg",
+  "progress": 35,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 28
+  }
+}, {
+  "name": "Marvel's Spider-Man",
+  "console": "PS4",
+  "imgUrl": "https://www.dontwasteyourmoney.com/wp-content/uploads/2019/07/81d6JU6g1pL._AC_SX215_.jpg",
+  "progress": 62,
+  "trophies": {
+    "platinum": 1,
+    "gold": 2,
+    "silver": 10,
+    "bronze": 38
+  }
+}, {
+  "name": "Assassin's Creed Origins",
+  "console": "PS4",
+  "imgUrl": "https://images.pushsquare.com/3cadc62102cf6/assassins-creed-origins-cover.cover_300x.jpg",
+  "progress": 10,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 6
+  }
+}, {
+  "name": "Need for Speed Most Wanted",
+  "console": "PS3",
+  "imgUrl": "https://media.vandal.net/master/16138/2012121611285_1.jpg",
+  "progress": 43,
+  "trophies": {
+    "platinum": 0,
+    "gold": 1,
+    "silver": 4,
+    "bronze": 20
+  }
+}, {
+  "name": "DiRT 3",
+  "console": "PS3",
+  "imgUrl": "https://m.media-amazon.com/images/I/51f+7FgjF0L._SY500_.jpg",
+  "progress": 21,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 17
+  }
+}, {
+  "name": "HEAVY RAIN",
+  "console": "PS3",
+  "imgUrl": "https://img.europapress.es/fotoweb/fotonoticia_20100302162454_260.webp",
+  "progress": 35,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 23
+  }
+}, {
+  "name": "DEATH STRANDING",
+  "console": "PS4",
+  "imgUrl": "https://cl.buscafs.com/www.levelup.com/public/uploads/images/442659/442659_256x327.jpg",
+  "progress": 14,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 10
+  }
+}, {
+  "name": "Resident Evil 7: Biohazard",
+  "console": "PS4",
+  "imgUrl": "https://media.vandal.net/t200/39839/resident-evil-7-201610614915_1.jpg",
+  "progress": 8,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 9
+  }
+}, {
+  "name": "Detroit: Become Human",
+  "console": "PS4",
+  "imgUrl": "https://static.swappa.com/images/cache/12/1d/121d849f9febe07d7e7a5603c7c5381b.jpg",
+  "progress": 30,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 21
+  }
+}, {
+  "name": "Assassin's Creed Syndicate",
+  "console": "PS4",
+  "imgUrl": "https://i1.wp.com/powersoft365customers.blob.core.windows.net/he288410-nereis-trading-ltd/Items/3307215893081.jpg",
+  "progress": 16,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 12
+  }
+}, {
+  "name": "Tom Clancy's Ghost Recon Wildlands",
+  "console": "PS4",
+  "imgUrl": "https://happywishy.co.ke/storage/2019/06/ghost-recon-widlands.jpg",
+  "progress": 14,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 1,
+    "bronze": 11
+  }
+}, {
+  "name": "South Park: The Fractured But Whole",
+  "console": "PS4",
+  "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuPm9a3Ke7W3sYWkhu2-l3yTfruZQkYjvODg&usqp=CAU",
+  "progress": 68,
+  "trophies": {
+    "platinum": 0,
+    "gold": 2,
+    "silver": 9,
+    "bronze": 16
   }
 }, {
   "name": "Grand Theft Auto V",
   "console": "PS3",
   "imgUrl": "https://gameloot.in/wp-content/uploads/2016/01/Grand-Theft-Auto-V-PS3.jpg",
+  "progress": 48,
+  "trophies": {
+    "platinum": 0,
+    "gold": 1,
+    "silver": 4,
+    "bronze": 25
+  }
+}, {
+  "name": "Pro Evolution Soccer 2017",
+  "console": "PS4",
+  "imgUrl": "https://gamescenter.pe/wp-content/uploads/2018/04/PES2017-PS4.jpg",
+  "progress": 8,
   "trophies": {
     "platinum": 0,
     "gold": 0,
     "silver": 0,
-    "bronze": 0
+    "bronze": 6
+  }
+}, {
+  "name": "Rocksmith 2014",
+  "console": "PS4",
+  "imgUrl": "https://images.pushsquare.com/a5623a63dd30b/rocksmith-2014-edition-cover.cover_large.jpg",
+  "progress": 5,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 4
+  }
+}, {
+  "name": "Gran Turismo 5",
+  "console": "PS3",
+  "imgUrl": "https://cdn.mobygames.com/8aa494fa-abec-11ed-b17c-02420a000138.webp",
+  "progress": 11,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 8
+  }
+}, {
+  "name": "[PROTOTYPE 2]",
+  "console": "PS3",
+  "imgUrl": "https://images.static-bluray.com/products/16/1306_1_large.jpg",
+  "progress": 94,
+  "trophies": {
+    "platinum": 0,
+    "gold": 2,
+    "silver": 13,
+    "bronze": 26
+  }
+}, {
+  "name": "WATCH_DOGS",
+  "console": "PS3",
+  "imgUrl": "https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280x1280/products/49157/47973/wd------------------ps3__53247.1683121984.jpg?c=2",
+  "progress": 30,
+  "trophies": {
+    "platinum": 0,
+    "gold": 1,
+    "silver": 5,
+    "bronze": 8
+  }
+}, {
+  "name": "Resident Evil 5",
+  "console": "PS3",
+  "imgUrl": "https://gamershq.com/wp-content/uploads/2021/07/resident20evil20520gold20edition20ps3.jpg",
+  "progress": 38,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 31
+  }
+}, {
+  "name": "Resident Evil 6",
+  "console": "PS3",
+  "imgUrl": "https://media.vandal.net/m/15506/2012121715536_1.jpg",
+  "progress": 15,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 18
+  }
+}, {
+  "name": "Need for Speed Rivals",
+  "console": "PS3",
+  "imgUrl": "https://media.gamestop.com/i/gamestop/10109656/Need-for-Speed-Rivals---PlayStation-3?$pdp2x$",
+  "progress": 4,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 3
+  }
+}, {
+  "name": "Assassin's Creed IV Black Flag",
+  "console": "PS3",
+  "imgUrl": "https://images.heb.com/is/image/HEBGrocery/prd-medium/001723635.jpg",
+  "progress": 65,
+  "trophies": {
+    "platinum": 0,
+    "gold": 1,
+    "silver": 12,
+    "bronze": 28
+  }
+}, {
+  "name": "L.A. Noire",
+  "console": "PS3",
+  "imgUrl": "https://images.static-bluray.com/products/16/1021_1_large.jpg",
+  "progress": 85,
+  "trophies": {
+    "platinum": 0,
+    "gold": 6,
+    "silver": 9,
+    "bronze": 40
+  }
+}, {
+  "name": "Uncharted 3: Drake's Deception",
+  "console": "PS3",
+  "imgUrl": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/02/uncharted-3-portada-ficha-1878047.jpg?tf=384x",
+  "progress": 8,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 12
+  }
+}, {
+  "name": "Metal Gear Solid 4",
+  "console": "PS3",
+  "imgUrl": "https://static.xtralife.com/conversions/VZJC-QX4X21604-medium_w640_h480_q75-VZJCQX4X21604-original-portada13203-1536567251.webp",
+  "progress": 4,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 3
+  }
+}, {
+  "name": "Pro Evolution Soccer 2016",
+  "console": "PS3",
+  "imgUrl": "https://cl.buscafs.com/www.levelup.com/public/uploads/images/350327/350327_256x295.jpg",
+  "progress": 1,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 1
+  }
+}, {
+  "name": "Pro Evolution Soccer 2014",
+  "console": "PS3",
+  "imgUrl": "https://i5.walmartimages.com.mx/mg/gm/3pp/asr/fef1ed14-536e-4ad8-8b0e-5a1a798b87b7.2abf751f015e550844ed528757a7a34f.jpeg?odnHeight=372&odnWidth=372&odnBg=FFFFFF",
+  "progress": 10,
+  "trophies": {
+    "platinum": 0,
+    "gold": 1,
+    "silver": 0,
+    "bronze": 1
+  }
+}, {
+  "name": "Resident Evil 4",
+  "console": "PS3",
+  "imgUrl": "https://dixgamer.com/wp-content/uploads/2016/12/Resident-Evil-4-1.jpg",
+  "progress": 63,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 8
+  }
+}, {
+  "name": "Pro Evolution Soccer 2013",
+  "console": "PS3",
+  "imgUrl": "https://i.foro3djuegos.com/juegos/8325/pes_13/fotos/ficha/pes_13-2089590.jpg",
+  "progress": 18,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 4,
+    "bronze": 4
+  }
+}, {
+  "name": "FIFA 13",
+  "console": "PS3",
+  "imgUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQzRuGHwjqorl6C_vwnMk7u74IuH5zbVC1shcAsU7xW1oA1awFs",
+  "progress": 2,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 2
   }
 }]

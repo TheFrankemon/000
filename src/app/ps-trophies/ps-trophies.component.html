@@ -6,7 +6,10 @@
 <div class="games-container">
   <div class="game-item" *ngFor="let item of trophiesData">
     <div class="game-item-img-wrapper">
-      <div class="game-item-img" [ngStyle]="{'background-image':'url(' + item.imgUrl + ')'}"></div>
+      <div class="game-item-img" [ngStyle]="{
+        'background-image':'url(' + item.imgUrl + ')',
+        'height': item.console == 'PS4'? '110px': '104px'
+      }"></div>
     </div>
     <div class="game-item-info">
       <div class="game-item-title">

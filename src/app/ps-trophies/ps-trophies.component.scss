@@ -26,6 +26,8 @@
 .games-container {
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
+  overflow-y: auto;
   gap: 40px;
   padding: 60px 120px;
 }
@@ -39,6 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 270px;
   transform: skew(-5deg, 352deg);
   background-color: var(--workxp-panel-bg-color);
   padding: 20px;
@@ -46,8 +49,7 @@
 }
 
 .game-item-img {
-  width: 87px;
-  height: 100px;
+  width: 90px;
   background-position: center;
   background-size: cover;
   transform: rotate(5deg);
