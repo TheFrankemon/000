@@ -79,11 +79,11 @@
       ></div>
     </div>
     <div class="skill-content">
-      <h1 [ngStyle]="{
+      <h2 [ngStyle]="{
         background: 'linear-gradient(80deg, ' + item.accentColor + ' 0%, #FFFFFF 50%, #FFFFFF 100%)',
         '-webkit-background-clip': 'text',
         '-webkit-text-fill-color': 'transparent'
-      }">{{ item.title }}</h1>
+      }">{{ item.title }}</h2>
       <div class="scrolling-feats">
         <span>
           <ng-container *ngFor="let label of item.skillLine1; index as i">

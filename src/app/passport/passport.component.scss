@@ -9,7 +9,6 @@
 
 .passport-title {
   margin: 100px 50px 0px;
-  font-size: 50px;
   color: var(--text-light);
 }
 
@@ -71,5 +70,13 @@
     z-index: 0;
     text-shadow: 0px 0px 20px var(--text-dark);
     transition: font-size ease-in-out 0.25s;
+  }
+}
+
+// MOBILE
+@media screen and (max-width: 480px) {
+  .passport-item {
+    width: 150px;
+    height: 106px;
   }
 }

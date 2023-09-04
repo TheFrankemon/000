@@ -68,5 +68,9 @@ nav {
 
   .navbar-button-wrapper {
     margin: 0px 5vw;
+
+    &.show-buttons {
+      height: 36px;
+    }
   }
 }
