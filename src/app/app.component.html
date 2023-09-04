@@ -5,8 +5,15 @@
   </div>
 
   <div class="navbar-button-wrapper" [class.show-buttons]="showButtons">
-    <div class="navbar-button" [routerLink]="['/']" *ngFor="let item of routes" [fragment]="item.fragment">
-      {{ item.title }}
+    <div class="navbar-button" *ngFor="let item of routes">
+      <div *ngIf="!!item.fragment; else external" [routerLink]="['/']" [fragment]="item.fragment">
+        {{ item.title }}
+      </div>
+      <ng-template #external>
+        <div [routerLink]="['/' + item.route]">
+          {{ item.title }}
+        </div>
+      </ng-template>
     </div>
   </div>
 </nav>

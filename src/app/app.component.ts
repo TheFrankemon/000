@@ -2,6 +2,12 @@ import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ScrollListenerService } from './scroll-listener.service';
 
+type NavElement = {
+  title: string
+  fragment?: string
+  route?: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,10 +19,11 @@ export class AppComponent {
   showButtons = false;
   offsetSurpassedSub:Subscription;
 
-  routes = [
-    {fragment: 'home', title: 'Home'},
+  routes: NavElement[] = [
+    // {fragment: 'home', title: 'Home'},
     {fragment: 'about', title: 'Why Franco?'},
     {fragment: 'work', title: 'Experience & Skills'},
+    {route: 'passport', title: 'Passport'},
   ];
 
   constructor(
