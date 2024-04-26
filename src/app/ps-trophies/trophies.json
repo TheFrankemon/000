@@ -12,7 +12,7 @@
 }, {
   "name": "Mafia II: Definitive Edition",
   "console": "PS4",
-  "imgUrl": "https://dixgamer.com/wp-content/uploads/2020/09/Mafia-Trilogy.jpg",
+  "imgUrl": "https://gamescenter.pe/wp-content/uploads/2020/11/Mafia-Trilogy-510x638.jpg",
   "progress": 34,
   "trophies": {
     "platinum": 0,
@@ -79,17 +79,17 @@
   "name": "Cyberpunk 2077",
   "console": "PS4",
   "imgUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsplIfZZi5d8DE5H_8K-8gS3X8SNW_xnbY73WvsZpKjNZxdCFU",
-  "progress": 22,
+  "progress": 15,
   "trophies": {
     "platinum": 0,
     "gold": 0,
-    "silver": 2,
-    "bronze": 11
+    "silver": 3,
+    "bronze": 6
   }
 }, {
   "name": "Mafia: Definitive Edition",
   "console": "PS4",
-  "imgUrl": "https://dixgamer.com/wp-content/uploads/2020/09/Mafia-Trilogy.jpg",
+  "imgUrl": "https://gamescenter.pe/wp-content/uploads/2020/11/Mafia-Trilogy-510x638.jpg",
   "progress": 1,
   "trophies": {
     "platinum": 0,
@@ -185,7 +185,7 @@
     "bronze": 36
   }
 }, {
-  "name": "GTA IV",
+  "name": "Grand Theft Auto IV",
   "console": "PS3",
   "imgUrl": "https://m.media-amazon.com/images/I/51zoLlyH75L._UL320_.jpg",
   "progress": 35,
@@ -254,12 +254,12 @@
   "name": "DEATH STRANDING",
   "console": "PS4",
   "imgUrl": "https://cl.buscafs.com/www.levelup.com/public/uploads/images/442659/442659_256x327.jpg",
-  "progress": 14,
+  "progress": 30,
   "trophies": {
     "platinum": 0,
     "gold": 0,
     "silver": 0,
-    "bronze": 10
+    "bronze": 21
   }
 }, {
   "name": "Resident Evil 7: Biohazard",
@@ -297,7 +297,7 @@
 }, {
   "name": "Tom Clancy's Ghost Recon Wildlands",
   "console": "PS4",
-  "imgUrl": "https://happywishy.co.ke/storage/2019/06/ghost-recon-widlands.jpg",
+  "imgUrl": "https://d2j6dbq0eux0bg.cloudfront.net/images/12715646/633450025.jpg",
   "progress": 14,
   "trophies": {
     "platinum": 0,
@@ -319,7 +319,7 @@
 }, {
   "name": "Grand Theft Auto V",
   "console": "PS3",
-  "imgUrl": "https://gameloot.in/wp-content/uploads/2016/01/Grand-Theft-Auto-V-PS3.jpg",
+  "imgUrl": "https://cdn.mobygames.com/covers/3287126-grand-theft-auto-v-playstation-3-front-cover.jpg",
   "progress": 48,
   "trophies": {
     "platinum": 0,
