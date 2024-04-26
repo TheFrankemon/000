@@ -6,9 +6,9 @@
 <div class="games-container">
   <div class="game-item" *ngFor="let item of trophiesData">
     <div class="game-item-img-wrapper">
-      <div class="game-item-img" [class.is-ps4]="item.console == 'PS4'" [ngStyle]="{
+      <div class="game-item-img" [class.is-ps3]="item.console === 'PS3'" [ngStyle]="{
         'background-image':'url(' + item.imgUrl + ')',
-        'height': item.console == 'PS4'? '110px': '104px'
+        'height': item.console == 'PS3' ? '104px' : '110px'
       }"></div>
     </div>
     <div class="game-item-info">

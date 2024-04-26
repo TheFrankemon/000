@@ -1,4 +1,59 @@
 [{
+  "name": "YAKUZA 0",
+  "console": "PS4",
+  "imgUrl": "https://cdn.wallapop.com/images/10420/gj/gg/__/c10420p1000139631/i4859676391.jpg?pictureSize=W640",
+  "progress": 2,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 2
+  }
+}, {
+  "name": "Machinarium",
+  "console": "PS4",
+  "imgUrl": "https://1.bp.blogspot.com/-gyYii_81ejY/ZYpD6UuQ5AI/AAAAAAAAD1k/fDk9-aEGSO85ZpGVS8x2Stj5bYNPN-NnACNcBGAsYHQ/s0/1.jpg",
+  "progress": 23,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 5
+  }
+}, {
+  "name": "Hogwarts Legacy",
+  "console": "PS5",
+  "imgUrl": "https://gamerscolony.net/wp-content/uploads/2023/01/hl_2d_std_ps5_uk_2.jpg",
+  "progress": 22,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 2,
+    "bronze": 12
+  }
+}, {
+  "name": "Marvel's Spider-Man 2",
+  "console": "PS5",
+  "imgUrl": "https://files.ozbargain.com.au/n/55/839755l.jpg?h=501b10dd",
+  "progress": 5,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 0,
+    "bronze": 4
+  }
+}, {
+  "name": "Stray",
+  "console": "PS5",
+  "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWRuue498Y5DNXX6eky_F6oY4OqM_FZi3-NGRimWAPdg&s",
+  "progress": 13,
+  "trophies": {
+    "platinum": 0,
+    "gold": 0,
+    "silver": 3,
+    "bronze": 3
+  }
+}, {
   "name": "Need for Speed Heat",
   "console": "PS4",
   "imgUrl": "https://media.azadea.com/i/davinci/85_70768_000__101__01?$prd_large$&fmt=auto",
