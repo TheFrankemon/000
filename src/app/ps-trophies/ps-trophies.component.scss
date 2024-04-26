@@ -67,12 +67,15 @@
   height: 0px;
 }
 
+.angle-perspective {
+  transform: skew(-5deg, -8deg);
+}
+
 .game-item-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 350px;
-  transform: skew(-5deg, 352deg);
   background-color: #4A4F6DAA;
   padding: 20px;
   gap: 10px;
@@ -82,7 +85,6 @@
 
 .game-item-img-wrapper {
   position: absolute;
-  transform: skew(-5deg, -8deg);
   transition: filter 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
@@ -136,8 +138,7 @@
     position: relative;
 
     .trophy-count {
-      font-size: 32px;
-      font-weight: bold;
+      font-size: 20px;
       color: var(--text-light);
       text-shadow: -6px -3px var(--dark-color);
     }
@@ -146,7 +147,7 @@
       position: absolute;
       width: 30px;
       height: 30px;
-      right: -15px;
+      right: -20px;
       z-index: -1;
     }
   }
