@@ -13,7 +13,8 @@ export class WorkxpComponent implements OnInit {
     dates: 'Sep 2018 - Present',
     detail: [
       'Lead Web UI Developer on Sass + Angular.',
-      'Frontend Developer on Angular.'
+      'Frontend Developer on Angular.',
+      'Frontend Developer on React.'
     ]
   }, {
     id: 'ancestral',
