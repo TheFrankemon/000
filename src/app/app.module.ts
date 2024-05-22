@@ -10,6 +10,7 @@ import { CopyrightFooterComponent } from './copyright-footer/copyright-footer.co
 import { SmIconsComponent } from './sm-icons/sm-icons.component';
 import { PassportComponent } from './passport/passport.component';
 import { PsTrophiesComponent } from './ps-trophies/ps-trophies.component';
+import { CountriesComponent } from './passport/countries/countries.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PsTrophiesComponent } from './ps-trophies/ps-trophies.component';
     CopyrightFooterComponent,
     SmIconsComponent,
     PassportComponent,
-    PsTrophiesComponent
+    PsTrophiesComponent,
+    CountriesComponent
   ],
   imports: [
     BrowserModule,
