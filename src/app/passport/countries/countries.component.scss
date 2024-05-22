@@ -4,3 +4,56 @@
   height: 100vh;
   background: var(--main-bg-color-ps);
 }
+
+.map-wrapper {
+  height: 100vh;
+  position: relative;
+
+  object {
+    width: 230px;
+    height: 230px;
+    position:absolute;
+    transform-style: preserve-3d;
+
+    &:nth-child(1) {  //br
+      top: 50%;
+      left: 50%;
+    }
+    &:nth-child(2) {  //pe
+      top: 35%;
+      left: 5%;
+    }
+    &:nth-child(3) {  //cl
+      top: 65%;
+      left: 15%;
+    }
+    &:nth-child(4) {  //bo
+      top: 30%;
+      left: 30%;
+    }
+    &:nth-child(5) {  //us
+      top: 10%;
+      left: 10%;
+    }
+    &:nth-child(6) {  //tr
+      top: 5%;
+      left: 70%;
+    }
+    &:nth-child(7) {  //eg
+      top: 35%;
+      left: 75%;
+    }
+    &:nth-child(8) {  //es
+      top: 20%;
+      left: 50%;
+    }
+    &:nth-child(9) {  //ar
+      top: 60%;
+      left: 30%;
+    }
+    &:nth-child(10) {  //jp
+      top: 70%;
+      left: 75%;
+    }
+  }
+}
