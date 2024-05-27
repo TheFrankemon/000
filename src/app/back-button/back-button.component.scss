@@ -1,3 +1,9 @@
+:host {
+  display: flex;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .passport-header {
   display: flex;
   align-items: center;
@@ -9,12 +15,14 @@
   z-index: 1;
   width: 100vw;
 
-  h1 {
+  h2 {
     color: var(--text-light);
+    font-size: 36px;
   }
 }
 
 .back-button {
   align-self: flex-start;
   cursor: pointer;
+  pointer-events: all;
 }
