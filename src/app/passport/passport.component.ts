@@ -13,15 +13,15 @@ export class PassportComponent implements OnInit {
     locked: false,
     route: 'pstrophies'
   }, {
+    name: 'Countries',
+    bgImage: 'countries.jpg',
+    locked: false,
+    route: 'countries'
+  }, {
     name: 'Music Library',
     bgImage: 'music.jpg',
     locked: true,
     route: 'music'
-  }, {
-    name: 'Countries',
-    bgImage: 'countries.jpg',
-    locked: true,
-    route: 'countries'
   }, {
     name: 'Food',
     bgImage: 'food.jpg',
