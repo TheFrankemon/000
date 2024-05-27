@@ -8,7 +8,8 @@
     radial-gradient(farthest-corner at 70% 90%, #FFFFFF 0%, transparent 50%),
     linear-gradient(10deg, #000000 10%, #747474 75%, #dfdfdf 97%, #FFFFFF 100%);
 
-  #{--main-bg-color-ps}: radial-gradient(circle at 70% 250%, #374fff 0%, #292929 90%);
+  #{--pstrophies-bg-color}: radial-gradient(circle at 70% 250%, #374fff 0%, #101010 90%);
+  #{--countries-bg-color}: radial-gradient(circle at 50% 70%, #191959 0%, #101010 90%);
 
   #{--section1-bg-color}: #110066C2;
   #{--section2-bg-color}: #00123EC2;
