@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PassportComponent } from './passport/passport.component';
-import { PsTrophiesComponent } from './ps-trophies/ps-trophies.component';
+import { PsTrophiesComponent } from './passport/ps-trophies/ps-trophies.component';
 import { CountriesComponent } from './passport/countries/countries.component';
 
 const routes: Routes = [{

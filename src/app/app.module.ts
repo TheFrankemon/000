@@ -9,8 +9,9 @@ import { WorkxpComponent } from './workxp/workxp.component';
 import { CopyrightFooterComponent } from './copyright-footer/copyright-footer.component';
 import { SmIconsComponent } from './sm-icons/sm-icons.component';
 import { PassportComponent } from './passport/passport.component';
-import { PsTrophiesComponent } from './ps-trophies/ps-trophies.component';
+import { PsTrophiesComponent } from './passport/ps-trophies/ps-trophies.component';
 import { CountriesComponent } from './passport/countries/countries.component';
+import { BackButtonComponent } from './back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CountriesComponent } from './passport/countries/countries.component';
     SmIconsComponent,
     PassportComponent,
     PsTrophiesComponent,
-    CountriesComponent
+    CountriesComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,

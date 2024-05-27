@@ -1,0 +1,20 @@
+.passport-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 50px 0px;
+  backdrop-filter: blur(3px);
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+
+  h1 {
+    color: var(--text-light);
+  }
+}
+
+.back-button {
+  align-self: flex-start;
+  cursor: pointer;
+}

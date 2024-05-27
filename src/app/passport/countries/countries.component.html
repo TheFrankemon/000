@@ -1,3 +1,5 @@
+<app-back-button>Countries</app-back-button>
+
 <div class="map-wrapper">
   <div class="country-object {{item.code}}" *ngFor="let item of visitedCountries; let i = index">
     <div class="country-map" (click)="test()" (mouseenter)="hovered=i" (mouseleave)="hovered=-1">
