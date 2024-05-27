@@ -1,32 +1,8 @@
 <div class="map-wrapper">
-  <div>
-    <object type="image/svg+xml" data="assets/countries/br.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/pe.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/cl.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/bo.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/us.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/tr.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/eg.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/es.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/ar.svg"></object>
-  </div>
-  <div>
-    <object type="image/svg+xml" data="assets/countries/jp.svg"></object>
+  <div class="country-object {{item.code}}" *ngFor="let item of visitedCountries; let i = index">
+    <div class="country-map" (click)="test()" (mouseenter)="hovered=i" (mouseleave)="hovered=-1">
+      <object type="image/svg+xml" [data]="item.sanitizedUrl"></object>
+    </div>
+    <h2 [class.hovered]="hovered === i">{{item.name}}</h2>
   </div>
 </div>
