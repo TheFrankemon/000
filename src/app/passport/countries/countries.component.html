@@ -1,6 +1,7 @@
 <app-back-button>Countries</app-back-button>
 
 <div class="map-wrapper">
+  <span class="map-disclaimer">*not in relative scale nor positioning as in geographic maps. Kids beware.</span>
   <div class="country-object {{item.code}}" *ngFor="let item of visitedCountries; let i = index">
     <div class="country-map" (click)="test()" (mouseenter)="hovered=i" (mouseleave)="hovered=-1">
       <object type="image/svg+xml" [data]="item.sanitizedUrl"></object>

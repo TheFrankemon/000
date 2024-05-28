@@ -10,6 +10,15 @@
   position: relative;
   width: 730px;
   margin: 90px auto 0;
+
+  .map-disclaimer {
+    position: absolute;
+    top: 40px;
+    left: -70px;
+    color: var(--light-color);
+    font-size: 10px;
+    z-index: 2;
+  }
 }
 
 .country-object {
@@ -50,17 +59,17 @@
   }
 
   &.ar {
-    top: 60%;
+    top: 62%;
     left: 22%;
 
     .country-map {
       clip-path: polygon(32% 48%, 34% 23%, 37% 7%, 43% 0%, 54% 0%, 57% 6%, 63% 6%, 65% 11%, 75% 8%, 70% 18%, 67% 18%, 62% 28%, 68% 41%,
       66% 46%, 57% 46%, 46% 68%, 47% 72%, 40% 85%, 42% 97%, 51% 97%, 52% 100%, 37% 100%, 35% 89%, 26% 88%, 28% 73%, 31% 68%, 31% 61%,
       29% 60%, 29% 52%);
-      transform: scale(1) rotate(-25deg);
+      transform: scale(1) rotate(20deg);
 
       &:hover {
-        transform: scale(1.2) rotate(-25deg);
+        transform: scale(1.2) rotate(20deg);
       }
     }
   }
@@ -73,21 +82,26 @@
       clip-path: polygon(7% 58%, 8% 42%, 12% 22%, 6% 8%, 17% 10%, 28% 3%, 39% 0%, 40% 1%, 37% 7%, 43% 20%, 51% 20%, 64% 29%, 74% 29%,
       75% 43%, 76% 47%, 89% 47%, 93% 64%, 92% 80%, 90% 80%, 83% 73%, 65% 74%, 59% 95%, 48% 92%, 45% 98%, 32% 94%, 24% 100%, 19% 100%,
       17% 90%, 13% 82%);
+      transform: scale(1) rotate(-10deg);
+
+      &:hover {
+        transform: scale(1.2) rotate(-10deg);
+      }
     }
   }
 
   &.br {
-    top: 55%;
-    left: 40%;
+    top: 58%;
+    left: 46%;
 
     .country-map {
       clip-path: polygon(1% 31%, 5% 23%, 11% 23%, 13% 9%, 34% 0%, 36% 0%, 38% 9%, 47% 8%, 47% 6%, 56% 2%, 61% 11%, 88% 21%, 97% 27%,
       99% 31%, 95% 39%, 90% 43%, 88% 59%, 84% 68%, 65% 78%, 66% 81%, 61% 91%, 54% 100%, 52% 100%, 48% 92%, 44% 91%, 42% 87%, 51% 81%,
       45% 68%, 42% 68%, 39% 62%, 42% 59%, 22% 41%, 12% 41%, 4% 38%);
-      transform: scale(1) rotate(10deg);
+      transform: scale(1) rotate(20deg);
 
       &:hover {
-        transform: scale(1.2) rotate(10deg);
+        transform: scale(1.2) rotate(20deg);
       }
     }
   }
@@ -102,7 +116,7 @@
   }
   &.eg {
     top: 33%;
-    left: 60%;
+    left: 64%;
 
     .country-map {
       clip-path: polygon(0% 6%, 23% 6%, 38% 11%, 45% 6%, 62% 6%, 78% 9%, 86% 26%, 75% 47%, 88% 73%, 92% 73%, 90% 84%, 100% 89%, 100% 94%,
@@ -115,8 +129,8 @@
     }
   }
   &.jp {
-    top: 54%;
-    left: 65%;
+    top: 56%;
+    left: 72%;
 
     .country-map {
       clip-path: polygon(12% 87%, 14% 82%, 30% 68%, 44% 68%, 52% 51%, 60% 49%, 60% 21%, 59% 19%, 66% 5%, 64% 0%, 70% 0%, 79% 8%, 84% 5%,
@@ -125,7 +139,7 @@
   }
   &.pe {
     top: 30%;
-    left: -5%;
+    left: -7%;
 
     .country-map {
       clip-path: polygon(14% 26%, 18% 18%, 24% 18%, 22% 24%, 29% 25%, 34% 15%, 40% 15%, 48% 4%, 47% 0%, 53% 0%, 54% 3%, 65% 12%, 76% 12%,
@@ -134,7 +148,7 @@
     }
   }
   &.es {
-    top: 13%;
+    top: 11%;
     left: 38%;
 
     .country-map {
@@ -149,7 +163,7 @@
     }
   }
   &.tr {
-    top: 9%;
+    top: 7%;
     left: 70%;
 
     .country-map {
@@ -163,8 +177,8 @@
     }
   }
   &.us {
-    top: 7%;
-    left: 6%;
+    top: 6%;
+    left: 4%;
 
     .country-map {
       clip-path: polygon(0% 40%, 6% 20%, 17% 20%, 62% 26%, 70% 30%, 77% 38%, 85% 30%, 95% 23%, 100% 27%, 100% 29%, 90% 50%, 90% 56%,
