@@ -10,15 +10,15 @@
   position: relative;
   width: 730px;
   margin: 90px auto 0;
+}
 
-  .map-disclaimer {
-    position: absolute;
-    top: 40px;
-    left: -70px;
-    color: var(--light-color);
-    font-size: 10px;
-    z-index: 2;
-  }
+.map-disclaimer {
+  position: absolute;
+  top: 140px;
+  left: 106px;
+  color: var(--light-color);
+  font-size: 10px;
+  z-index: 2;
 }
 
 .country-object {
@@ -55,6 +55,18 @@
 
     &.hovered {
       opacity: 1;
+    }
+  }
+
+  &.selected {
+    top: 240px !important;
+    left: 150px !important;
+    z-index: 1001;
+    transform: scale(2) !important;
+
+    .country-map {
+      transform: scale(1) !important;
+      cursor: default;
     }
   }
 

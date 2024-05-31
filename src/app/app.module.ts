@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { PassportComponent } from './passport/passport.component';
 import { PsTrophiesComponent } from './passport/ps-trophies/ps-trophies.component';
 import { CountriesComponent } from './passport/countries/countries.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { CountryDetailComponent } from './passport/countries/country-detail/country-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { BackButtonComponent } from './back-button/back-button.component';
     PassportComponent,
     PsTrophiesComponent,
     CountriesComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    CountryDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OverlayModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
