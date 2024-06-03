@@ -1,0 +1,68 @@
+[{
+  "name": "Argentina",
+  "code": "ar",
+  "cities": [ "Buenos Aires", "Morón", "Ramos Mejía" ],
+  "airports": [ "EZE" ]
+}, {
+  "name": "Bolivia",
+  "code": "bo",
+  "cities": [ "La Paz", "Cochabamba", "Santa Cruz de la Sierra", "Tarija", "Sucre", "Oruro" ],
+  "airports": [ "LPB", "CBB", "VVI", "TJA", "SRE", "ORU" ]
+}, {
+  "name": "Brazil",
+  "code": "br",
+  "cities": [ "São Paulo", "Rio de Janeiro" ],
+  "airports": [ "GRU", "SDU" ]
+}, {
+  "name": "Chile",
+  "code": "cl",
+  "cities": [ "Iquique", "Arica", "Santiago" ],
+  "airports": [ "IQQ", "SCL" ]
+}, {
+  "name": "Egypt",
+  "code": "eg",
+  "cities": [
+    "Cairo",
+    "Giza",
+    "6th of October",
+    "New Cairo",
+    "Sharm El-Sheikh",
+    "Alexandria",
+    "Aswan",
+    "Luxor",
+    "Sidi Abd-el-Rahman",
+    "Dahab",
+    "Siwa",
+    "Nuweibaa"
+  ],
+  "airports": [ "CAI" ]
+}, {
+  "name": "Japan",
+  "code": "jp",
+  "cities": [
+    "Tokyo",
+    "Yokohama",
+    "Kyoto",
+    "Osaka",
+    "Nara",
+    "Mishima"
+  ],
+  "airports": [ "TYO", "HND" ]
+}, {
+  "name": "Peru",
+  "code": "pe",
+  "airports": [ "LIM" ]
+}, {
+  "name": "Spain",
+  "code": "es",
+  "airports": [ "MAD" ]
+}, {
+  "name": "Turkey",
+  "code": "tr",
+  "cities": [ "Istanbul", "Göreme" ],
+  "airports": [ "IST", "SAW", "ASR" ]
+}, {
+  "name": "USA",
+  "code": "us",
+  "airports": [ "DFW", "JFK" ]
+}]

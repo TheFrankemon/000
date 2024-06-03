@@ -65,6 +65,17 @@ h1 {
   color: var(--text-dark);
 }
 
+.cdk-overlay-container,
+.cdk-overlay-backdrop,
+.cdk-global-overlay-wrapper,
+.cdk-overlay-pane {
+  z-index: unset;
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  backdrop-filter: blur(3px);
+}
+
 // MOBILE
 @media screen and (max-width: 480px) {
   h1 {

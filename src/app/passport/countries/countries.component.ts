@@ -2,8 +2,10 @@ import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ComponentPortal, PortalInjector } from '@angular/cdk/portal';
 import { Component, Injector, OnInit } from '@angular/core';
 import { merge } from 'rxjs';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { CONTAINER_DATA, CountryDetailComponent } from './country-detail/country-detail.component';
+import countriesObj from './countries.json';
+import { CountryType } from 'src/app/types';
 
 @Component({
   selector: 'app-countries',
@@ -12,11 +14,7 @@ import { CONTAINER_DATA, CountryDetailComponent } from './country-detail/country
 })
 export class CountriesComponent implements OnInit {
 
-  visitedCountries: {
-    name: string
-    code: string
-    sanitizedUrl?: SafeUrl
-  }[];
+  visitedCountries: CountryType[] = countriesObj;
   hovered: number;
   selectedCountry: string | undefined;
 
@@ -25,38 +23,6 @@ export class CountriesComponent implements OnInit {
     public overlay: Overlay,
     private injector: Injector
   ) {
-    this.visitedCountries = [{
-      name: "Argentina",
-      code: "ar"
-    }, {
-      name: "Bolivia",
-      code: "bo"
-    }, {
-      name: "Brazil",
-      code: "br"
-    }, {
-      name: "Chile",
-      code: "cl"
-    }, {
-      name: "Egypt",
-      code: "eg"
-    }, {
-      name: "Japan",
-      code: "jp"
-    }, {
-      name: "Peru",
-      code: "pe"
-    }, {
-      name: "Spain",
-      code: "es"
-    }, {
-      name: "Turkey",
-      code: "tr"
-    }, {
-      name: "USA",
-      code: "us"
-    }]
-
     this.hovered = -1;
   }
 
@@ -71,7 +37,7 @@ export class CountriesComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  createInjector(d: string): PortalInjector {
+  createInjector(d: CountryType): PortalInjector {
     const injectorTokens = new WeakMap();
     injectorTokens.set(CONTAINER_DATA, d);
     return new PortalInjector(this.injector, injectorTokens);
@@ -85,15 +51,16 @@ export class CountriesComponent implements OnInit {
     this.selectedCountry = this.visitedCountries[countryIndex].code;
 
     const overlayConfig: OverlayConfig = {
-      width: '310px',
+      width: '350px',
+      height: '300px',
       // panelClass: 'absolute-overlay',
       hasBackdrop: true,
-      positionStrategy: this.overlay.position().global().right().centerVertically()
+      positionStrategy: this.overlay.position().global().centerHorizontally('650px').centerVertically()
     };
 
     const overlayRef = this.overlay.create(overlayConfig);
 
-    const data = this.visitedCountries[countryIndex].name;
+    const data = this.visitedCountries[countryIndex];
     const countryPortal = new ComponentPortal(CountryDetailComponent, null, this.createInjector(data));
     const countryPortalRef = overlayRef.attach(countryPortal);
 

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Inject, InjectionToken, OnInit } from '@angular/core';
+import { CountryType } from 'src/app/types';
 
 export const CONTAINER_DATA = new InjectionToken<string>('CONTAINER_DATA');
 
@@ -12,7 +13,7 @@ export class CountryDetailComponent implements OnInit {
   closeEmitter = new EventEmitter<void | boolean>();
 
   constructor(
-    @Inject(CONTAINER_DATA) public componentData: string,
+    @Inject(CONTAINER_DATA) public countryData: CountryType,
   ) { }
 
   ngOnInit(): void {

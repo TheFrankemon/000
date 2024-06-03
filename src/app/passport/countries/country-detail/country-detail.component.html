@@ -1,1 +1,22 @@
 <div class="close-button" (click)="close()">X</div>
+
+<div class="country-details">
+  <h1>{{countryData.name}}</h1>
+  <div class="detail-item">
+    <h2 class="detail-label">Cities</h2>
+    <hr class="detail-separator">
+    <h2 class="detail-count" *ngIf="countryData.cities;else justTransit">{{countryData.cities.length}}</h2>
+    <ng-template #justTransit>
+      <div class="just-transit-label">
+        <h2 class="detail-count">0</h2>
+        <span>&nbsp; ͢ &nbsp;&nbsp;Just transit.</span>
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="detail-item">
+    <h2 class="detail-label">Airports</h2>
+    <hr class="detail-separator">
+    <h2 class="detail-count">{{countryData.airports.length}}</h2>
+  </div>
+</div>

@@ -1,3 +1,40 @@
 :host {
-  background-color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  // background-color: var(--light-color);
+  color: var(--light-color);
+}
+
+.close-button {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.country-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-item {
+  transform: rotate(-7deg);
+
+  .detail-label {
+    align-self: flex-end;
+  }
+
+  .detail-count {
+    font-size: 50px;
+    text-shadow: 5px 6px 0px #3D3D3D;
+  }
+}
+
+.just-transit-label {
+  display: inline-flex;
+  gap: 10px;
+
+  span {
+    align-self: center;
+  }
 }
