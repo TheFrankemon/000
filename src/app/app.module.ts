@@ -14,6 +14,7 @@ import { PsTrophiesComponent } from './passport/ps-trophies/ps-trophies.componen
 import { CountriesComponent } from './passport/countries/countries.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { CountryDetailComponent } from './passport/countries/country-detail/country-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CountryDetailComponent } from './passport/countries/country-detail/coun
     BrowserModule,
     AppRoutingModule,
     OverlayModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,11 @@
 import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ComponentPortal, PortalInjector } from '@angular/cdk/portal';
 import { Component, Injector, OnInit } from '@angular/core';
-import { merge } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { lastValueFrom, map, merge } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CONTAINER_DATA, CountryDetailComponent } from './country-detail/country-detail.component';
-import countriesObj from './countries.json';
-import { CountryType } from 'src/app/types';
+import { CountryType, JsonSiloObject } from 'src/app/types';
 
 @Component({
   selector: 'app-countries',
@@ -14,23 +14,40 @@ import { CountryType } from 'src/app/types';
 })
 export class CountriesComponent implements OnInit {
 
-  visitedCountries: CountryType[] = countriesObj;
+  visitedCountries: CountryType[] = [];
   hovered: number;
   selectedCountry: string | undefined;
+  loading = true;
 
   constructor(
     private sanitizer: DomSanitizer,
     public overlay: Overlay,
-    private injector: Injector
+    private injector: Injector,
+    private http: HttpClient,
   ) {
     this.hovered = -1;
   }
 
-  ngOnInit(): void {
-    this.visitedCountries = this.visitedCountries.map(item => ({
-      ...item,
-      sanitizedUrl: this.sanitizeURL(`assets/countries/${item.code}.svg`)
-    }));
+  async ngOnInit() {
+    this.visitedCountries = (await lastValueFrom(this.getAllCountries()))
+      .map(item => ({
+        ...item,
+        sanitizedUrl: this.sanitizeURL(`assets/countries/${item.code}.svg`)
+      })
+    );
+    this.loading = false;
+  }
+
+  getAllCountries() {
+    const url = 'https://api.jsonsilo.com/public/1f8e654b-008a-4ee0-8e20-98034415aece';
+    const headers = new HttpHeaders({
+      // 'X-SILO-KEY': process.env.JSONSILO_API_KEY!,
+      'Content-Type': 'application/json'
+    });
+
+    return this.http.get<JsonSiloObject>(url, { headers: headers}).pipe(
+      map(res => res.countries)
+    );
   }
 
   sanitizeURL(url: string) {
