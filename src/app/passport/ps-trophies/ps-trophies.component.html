@@ -1,6 +1,6 @@
 <app-back-button>PS Trophies</app-back-button>
 
-<div class="games-container">
+<div class="games-container" *ngIf="!loading">
   <div class="game-item" *ngFor="let item of trophiesData">
     <div class="game-item-img-wrapper angle-perspective">
       <div class="game-item-img" [class.is-ps3]="item.console === 'PS3'" [ngStyle]="{

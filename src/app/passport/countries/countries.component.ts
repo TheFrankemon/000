@@ -1,11 +1,11 @@
 import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 import { ComponentPortal, PortalInjector } from '@angular/cdk/portal';
 import { Component, Injector, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { lastValueFrom, map, merge } from 'rxjs';
+import { merge } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CONTAINER_DATA, CountryDetailComponent } from './country-detail/country-detail.component';
-import { CountryType, JsonSiloObject } from 'src/app/types';
+import { CountryType } from 'src/app/types';
+import { JsonHttpService } from 'src/app/json-http.service';
 
 @Component({
   selector: 'app-countries',
@@ -23,31 +23,19 @@ export class CountriesComponent implements OnInit {
     private sanitizer: DomSanitizer,
     public overlay: Overlay,
     private injector: Injector,
-    private http: HttpClient,
+    private jsonHttpService: JsonHttpService,
   ) {
     this.hovered = -1;
   }
 
   async ngOnInit() {
-    this.visitedCountries = (await lastValueFrom(this.getAllCountries()))
+    this.visitedCountries = (await this.jsonHttpService.getAllCountries())
       .map(item => ({
         ...item,
         sanitizedUrl: this.sanitizeURL(`assets/countries/${item.code}.svg`)
       })
     );
     this.loading = false;
-  }
-
-  getAllCountries() {
-    const url = 'https://api.jsonsilo.com/public/1f8e654b-008a-4ee0-8e20-98034415aece';
-    const headers = new HttpHeaders({
-      // 'X-SILO-KEY': process.env.JSONSILO_API_KEY!,
-      'Content-Type': 'application/json'
-    });
-
-    return this.http.get<JsonSiloObject>(url, { headers: headers}).pipe(
-      map(res => res.countries)
-    );
   }
 
   sanitizeURL(url: string) {

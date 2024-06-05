@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import trophiesObj from './trophies.json';
+import { JsonHttpService } from 'src/app/json-http.service';
+import { TrophiesType } from 'src/app/types';
 
 @Component({
   selector: 'app-ps-trophies',
@@ -8,11 +9,16 @@ import trophiesObj from './trophies.json';
 })
 export class PsTrophiesComponent implements OnInit {
 
-  trophiesData = trophiesObj;
+  trophiesData: TrophiesType[] = [];
+  loading = true;
 
-  constructor() { }
+  constructor(
+    private jsonHttpService: JsonHttpService,
+  ) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.trophiesData = await this.jsonHttpService.getAllTrophies();
+    this.loading = false;
   }
 
   getTrophiesObj(gameTrophies: {platinum: number, gold: number, silver: number, bronze: number; }) {
