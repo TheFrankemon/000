@@ -15,6 +15,7 @@ import { CountriesComponent } from './passport/countries/countries.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { CountryDetailComponent } from './passport/countries/country-detail/country-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     PsTrophiesComponent,
     CountriesComponent,
     BackButtonComponent,
-    CountryDetailComponent
+    CountryDetailComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+object {
+  width: 140px;
+  animation: rocking 1s ease-in-out infinite;
+}
+
+.re {
+  transform: scale(1.2, 0.3) rotate(180deg);
+  filter: brightness(0);
+  margin-top: -90px;
+}
+
+@keyframes rocking {
+  from {transform: rotate(5deg);}
+  50% {transform: rotate(-5deg);}
+  to {transform: rotate(5deg);}
+}
