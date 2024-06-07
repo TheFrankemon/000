@@ -25,5 +25,14 @@ export type CountryType = {
   code: string
   sanitizedUrl?: SafeUrl
   cities?: string[]
-  airports: string[]
+  airports: AirportType[]
+}
+
+type AirportType = {
+  code: string
+  name: string
+  city: string
+  flightDate: string
+  flightNumber: string
+  airline: string
 }

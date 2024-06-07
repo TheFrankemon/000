@@ -14,9 +14,22 @@
     </ng-template>
   </div>
 
-  <div class="detail-item">
+  <div id="airports" class="detail-item">
     <h2 class="detail-label">Airports</h2>
     <hr class="detail-separator">
     <h2 class="detail-count">{{countryData.airports.length}}</h2>
+
+    <div class="airport-tags-wrapper" [class.shrink]="countryData.airports.length > 4">
+      <div class="airport-tag" *ngFor="let item of countryData.airports">
+        <span class="flight-info">{{item.flightDate}}<br/>{{item.flightNumber}}</span>
+
+        <div class="airport-name">
+          <h2>{{item.code}}</h2>
+        </div>
+        <span class="city-name">{{item.city}}</span>
+        <span class="airport-name-long">{{item.name}}</span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWbrvkO8ROOkvZpB-7MLMIcd9hny6bOKKTEQ&s"/>
+      </div>
+    </div>
   </div>
 </div>

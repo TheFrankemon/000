@@ -6,6 +6,8 @@
   color: var(--light-color);
 }
 
+$airport-tag-width: 60px;
+
 .close-button {
   align-self: flex-end;
   cursor: pointer;
@@ -37,4 +39,104 @@
   span {
     align-self: center;
   }
+}
+
+#airports {
+  position: relative;
+}
+
+.airport-tags-wrapper {
+  position: absolute;
+  top: 70px;
+  left: 120px;
+  display: flex;
+  gap: 20px;
+
+  &.shrink {
+    gap: 10px;
+  }
+
+  .airport-tag {
+    width: $airport-tag-width;
+    height: $airport-tag-width * 2;
+    background-color: var(--light-color);
+    border-inline: 5px solid #00db25;
+    writing-mode: horizontal-tb;
+    animation: swing 1s ease-in-out alternate infinite;
+    transform-origin: center -40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: $airport-tag-width;
+      left: -5px;
+      height: 10px;
+      background-color: var(--light-color);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 40px;
+      border: 1px dashed #f2f2f2;
+      top: -35px;
+      left: 50%;
+      z-index: -1;
+    }
+
+    span:first-child {
+      margin-top: 12px;
+    }
+
+    span {
+      display: block;
+      color: var(--dark-color);
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .flight-info {
+      line-height: 12px;
+      font-size: 8px;
+    }
+
+    .airport-name {
+      background-color: var(--dark-color);
+      text-align: center;
+      margin: 0px 2px;
+      
+      h2 {
+        color: var(--light-color);
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+    .city-name {
+      font-size: 8px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .airport-name-long {
+      display: flex;
+      font-size: 8px;
+      line-height: 8px;
+      margin-top: 2px;
+    }
+
+    img {
+      width: $airport-tag-width - 5px;
+      clip-path: inset(10% 5% 49% 5%);
+      position: absolute;
+      bottom: -20px;
+      left: -3px;
+    }
+  }
+}
+
+@keyframes swing {
+  0%{ transform: rotate(-5deg)}
+  100%{ transform: rotate(5deg) }
 }
