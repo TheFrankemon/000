@@ -60,7 +60,7 @@ export class CountriesComponent implements OnInit {
       height: '300px',
       // panelClass: 'absolute-overlay',
       hasBackdrop: true,
-      positionStrategy: this.overlay.position().global().centerHorizontally('650px').centerVertically()
+      positionStrategy: this.overlay.position().global().centerHorizontally('470px').centerVertically()
     };
 
     const overlayRef = this.overlay.create(overlayConfig);

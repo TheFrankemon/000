@@ -48,12 +48,16 @@ $airport-tag-width: 60px;
 .airport-tags-wrapper {
   position: absolute;
   top: 70px;
-  left: 120px;
+  right: 0px;
   display: flex;
   gap: 20px;
 
   &.shrink {
-    gap: 10px;
+    gap: 0px;
+
+    .airport-tag {
+      margin-left: -15px;
+    }
   }
 
   .airport-tag {
