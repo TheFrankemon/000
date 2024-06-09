@@ -18,6 +18,7 @@ export class CountriesComponent implements OnInit {
   hovered: number;
   selectedCountry: string | undefined;
   loading = true;
+  isMobile: boolean = false;
 
   constructor(
     private sanitizer: DomSanitizer,
@@ -29,6 +30,8 @@ export class CountriesComponent implements OnInit {
   }
 
   async ngOnInit() {
+    this.isMobile = window.innerWidth <= 480;
+
     this.visitedCountries = (await this.jsonHttpService.getAllCountries())
       .map(item => ({
         ...item,
@@ -60,7 +63,9 @@ export class CountriesComponent implements OnInit {
       height: '300px',
       // panelClass: 'absolute-overlay',
       hasBackdrop: true,
-      positionStrategy: this.overlay.position().global().centerHorizontally('470px').centerVertically()
+      positionStrategy: this.overlay.position().global()
+        .centerHorizontally(this.isMobile ? undefined : '470px')
+        .centerVertically(this.isMobile ? '280px' : undefined)
     };
 
     const overlayRef = this.overlay.create(overlayConfig);

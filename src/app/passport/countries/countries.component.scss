@@ -213,3 +213,80 @@
     }
   }
 }
+
+// MOBILE
+@media screen and (max-width: 480px) {
+  .map-wrapper {
+    width: initial;
+    margin: 130px 5px 0px;
+  }
+
+  .country-object {
+    width: 150px;
+    height: 150px;
+
+    &.selected {
+      top: 140px !important;
+      left: 35% !important;
+    }
+
+    &.ar {
+      top: 54%;
+      left: 0%;
+    }
+
+    &.bo {
+      top: 38%;
+      left: 24%;
+
+      .country-map {
+        transform: scale(1) rotate(40deg);
+      }
+    }
+
+    &.br {
+      top: 60%;
+      left: 22%;
+    }
+
+    &.cl {
+      top: 36%;
+      left: -8%;
+    }
+
+    &.eg {
+      top: 43%;
+      left: 57%;
+    }
+
+    &.jp {
+      top: 62%;
+      left: 41%;
+    }
+
+    &.ma {
+      top: 21%;
+      left: 53%;
+    }
+
+    &.pe {
+      top: 18%;
+      left: 3%;
+    }
+
+    &.es {
+      top: 16%;
+      left: 33%;
+    }
+
+    &.tr {
+      top: 3%;
+      left: 50%;
+    }
+
+    &.us {
+      top: 1%;
+      left: 21%;
+    }
+  }
+}
