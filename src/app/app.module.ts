@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { HttpClientModule } from '@angular/common/http';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +16,6 @@ import { PsTrophiesComponent } from './passport/ps-trophies/ps-trophies.componen
 import { CountriesComponent } from './passport/countries/countries.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { CountryDetailComponent } from './passport/countries/country-detail/country-detail.component';
-import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
@@ -38,7 +39,7 @@ import { LoadingComponent } from './loading/loading.component';
     OverlayModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
