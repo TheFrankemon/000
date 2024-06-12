@@ -1,6 +1,6 @@
 {
   "name": "site000",
-  "version": "1.0.6b",
+  "version": "1.0.6c",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host=0.0.0.0 --disable-host-check",
