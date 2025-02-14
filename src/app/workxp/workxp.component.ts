@@ -108,6 +108,18 @@ export class WorkxpComponent implements OnInit {
       'Inheritance',
     ]
   }, {
+    id: 'react',
+    title: 'React',
+    accentColor: '#67DAFB',
+    skillLine1: [
+      'Functional components',
+      'Hooks',
+    ],
+    skillLine2: [
+      'Function caching',
+      'Typed props',
+    ]
+  }, {
     id: 'illustrator',
     title: 'Adobe Illustrator',
     accentColor: '#FF9B00',
