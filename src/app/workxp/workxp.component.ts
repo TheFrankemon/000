@@ -10,6 +10,7 @@ export class WorkxpComponent implements OnInit {
   jobs = [{
     id: 'wolivin',
     title: 'Wolivin',
+    flag: 'bo',
     dates: 'Sep 2024 - Present',
     detail: [
       'Frontend Developer on Angular.',
@@ -18,6 +19,7 @@ export class WorkxpComponent implements OnInit {
   }, {
     id: 'witco',
     title: 'Witco (formerly Monbuilding)',
+    flag: 'fr',
     dates: 'Aug 2019 - Aug 2024',
     detail: [
       'Lead Web UI Developer on Sass + Angular.',
@@ -27,6 +29,7 @@ export class WorkxpComponent implements OnInit {
   }, {
     id: 'tolaroid',
     title: 'Tolaroid',
+    flag: 'eg',
     dates: 'Feb 2019 - Mar 2019',
     detail: [
       'Mobile Frontend Developer on React Native.'
@@ -34,6 +37,7 @@ export class WorkxpComponent implements OnInit {
   }, {
     id: 'witco',
     title: 'Witco (formerly Monbuilding)',
+    flag: 'fr',
     dates: 'Sep 2018 - Jan 2019',
     detail: [
       'Junior Frontend Developer on Angular.'
@@ -41,6 +45,7 @@ export class WorkxpComponent implements OnInit {
   }, {
     id: 'ancestral',
     title: 'Ancestral Gods',
+    flag: 'bo',
     dates: 'Jan 2018 - Jun 2018',
     detail: [
       'Videogame developer trainee on Unity3D & C# programming.'
@@ -48,6 +53,7 @@ export class WorkxpComponent implements OnInit {
   }, {
     id: 'impeller',
     title: 'Impeller Studios',
+    flag: 'us',
     dates: 'Jul 2016 - Jul 2017',
     detail: [
       'Co-leader of local web videogame development team, using Phaser and team training on Git.'
@@ -55,6 +61,7 @@ export class WorkxpComponent implements OnInit {
   }, {
     id: 'assure',
     title: 'AssureSoft',
+    flag: 'bo',
     dates: 'Jan 2017 - Feb 2017',
     detail: [
       'Research Assistant intern on a CI tools POC.',

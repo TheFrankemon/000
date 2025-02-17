@@ -11,9 +11,9 @@
 
       <!-- 🔶 Work turn dynamic -->
       <div class="xp-item" [id]="item.id" *ngFor="let item of jobs">
-        <div class="img-holder"></div>
+        <div class="img-holder" [style]="{'background-image': 'url(/assets/xp/' + item.id + '-w.png)'}"></div>
         <div class="xp-content">
-          <h2 class="xp-title"><div class="flag"></div>{{ item.title }}</h2>
+          <h2 class="xp-title"><div class="flag" [style]="{'background-image': 'url(https://flagcdn.com/h20/' + item.flag + '.jpg)'}"></div>{{ item.title }}</h2>
           <p class="xp-dates">{{ item.dates }}</p>
           <p class="xp-detail">
             <ng-container *ngFor="let line of item.detail; index as i">
