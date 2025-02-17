@@ -18,11 +18,25 @@ export class WorkxpComponent implements OnInit {
   }, {
     id: 'witco',
     title: 'Witco (formerly Monbuilding)',
-    dates: 'Sep 2018 - Aug 2024',
+    dates: 'Aug 2019 - Aug 2024',
     detail: [
       'Lead Web UI Developer on Sass + Angular.',
-      'Frontend Developer on Angular.',
+      'Mid Frontend Developer on Angular.',
       'Frontend Developer on React.'
+    ]
+  }, {
+    id: 'tolaroid',
+    title: 'Tolaroid',
+    dates: 'Feb 2019 - Mar 2019',
+    detail: [
+      'Mobile Frontend Developer on React Native.'
+    ]
+  }, {
+    id: 'witco',
+    title: 'Witco (formerly Monbuilding)',
+    dates: 'Sep 2018 - Jan 2019',
+    detail: [
+      'Junior Frontend Developer on Angular.'
     ]
   }, {
     id: 'ancestral',
@@ -109,7 +123,7 @@ export class WorkxpComponent implements OnInit {
     ]
   }, {
     id: 'react',
-    title: 'React',
+    title: 'React / React Native',
     accentColor: '#67DAFB',
     skillLine1: [
       'Functional components',
