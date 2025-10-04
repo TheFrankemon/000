@@ -8,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class WorkxpComponent implements OnInit {
 
   jobs = [{
+    id: 'plata',
+    title: 'Plata Financial Inc.',
+    flag: 'us',
+    dates: 'May 2025 - Present',
+    detail: [
+      'Frontend Mobile Developer on React Native.'
+    ]
+  }, {
     id: 'wolivin',
     title: 'Wolivin',
     flag: 'bo',
-    dates: 'Sep 2024 - Present',
+    dates: 'Sep 2024 - Feb 2025',
     detail: [
       'Frontend Developer on Angular.',
       'Frontend Developer on React.'
