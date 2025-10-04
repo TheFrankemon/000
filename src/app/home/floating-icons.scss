@@ -1,0 +1,95 @@
+// Floating Icons Animation Component
+// Bubble-like floating animation with depth layering and horizontal drift
+
+.floating-icons-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  $total: 17;
+  
+  @for $i from 1 through $total {
+    // Consistent scaling
+    $base-scale: 0.4 + ($i * 0.04);
+    $scale: scale($base-scale);
+    
+    // Random positioning
+    $left-position: random(95) - 5%; // Random X position across screen (-5% to 90%)
+    
+    // Variable speed - some faster, some slower
+    $duration: 12 + random(10) + s;
+    $delay: random(15) + s; // Random delays for natural flow
+    
+    // Depth-based blur and z-index - restore proper layering
+    $depth: ($i % 4) + 1;
+    $blur: 1.5 + ($depth - 1) * 0.83; // Range from 1.5 to 4
+    $z-index: 3 - $depth; // Negative z-index for background layers
+
+    @media screen and (max-width: 480px) {
+      $base-scale: 0.2 + ($i * 0.03);
+      $scale: scale($base-scale);
+      $left-position: random(95) - 5%;
+    }
+
+    .floating-icon:nth-child(#{$i}){
+      left: $left-position;
+      animation: bubble-float#{$i} $duration linear infinite;
+      animation-delay: $delay;
+      transform: $scale;
+      z-index: $z-index;
+      filter: blur($blur + px) brightness(1 + ($depth * 0.1));
+      will-change: transform;
+
+      // Bubble float - steady upward with slight horizontal drift
+      @keyframes bubble-float#{$i} {
+        0% {
+          bottom: -10vh;
+          left: $left-position;
+          transform: $scale translateX(0px);
+        }
+        10% {
+          left: $left-position;
+          transform: $scale translateX(8px);
+        }
+        25% {
+          bottom: 20vh;
+          left: $left-position;
+          transform: $scale translateX(-12px);
+        }
+        40% {
+          left: $left-position;
+          transform: $scale translateX(15px);
+        }
+        60% {
+          bottom: 60vh;
+          left: $left-position;
+          transform: $scale translateX(-8px);
+        }
+        75% {
+          left: $left-position;
+          transform: $scale translateX(10px);
+        }
+        90% {
+          bottom: 100vh;
+          left: $left-position;
+          transform: $scale translateX(-5px);
+        }
+        100% {
+          bottom: 120vh;
+          left: $left-position;
+          transform: $scale translateX(0px);
+        }
+      }
+    }
+  }
+
+  .floating-icon {
+    width: 192px;
+    height: 192px;
+    position: absolute;
+    bottom: -10vh;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+}

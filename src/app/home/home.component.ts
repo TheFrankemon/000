@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ScrollListenerService } from '../scroll-listener.service';
 
@@ -7,7 +7,7 @@ import { ScrollListenerService } from '../scroll-listener.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnDestroy {
 
   @HostBinding('id') id = 'home';
   blurryFranco = false;
