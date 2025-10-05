@@ -80,32 +80,44 @@
 .games-container {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
   overflow-y: auto;
-  gap: 60px;
-  padding: 200px 120px 60px;
-}
-
-.game-item, .game-item-ghost {
-  display: flex;
-  position: relative;
-  flex: 1;
+  gap: 20px;
+  row-gap: 10px;
+  padding: 250px 120px 60px;
 }
 
 .game-item {
+  display: flex;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  z-index: 1;
+  transition: z-index 0.4s ease;
+  
   &:hover {
+    z-index: 100;
+    
     .game-item-img-wrapper {
-      filter: drop-shadow(#FFFFFFCC 0px 0px 5px) drop-shadow(#FFFFFF40 0px 0px 20px);
-      transform: translateX(-88px) skew(0deg, 0deg);
-      z-index: 1;
+      filter: drop-shadow(#FFFFFFCC 0px 0px 8px) drop-shadow(#FFFFFF60 0px 0px 25px) drop-shadow(#00000040 0px 8px 16px);
+      transform: translateX(-88px) translateZ(20px) rotateY(-15deg) rotateX(5deg) scale(2);
+      z-index: 10;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .game-item-img {
       box-shadow: none;
+      transform: translateZ(5px);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .game-item-info {
-      box-shadow: inset -8px 8px 20px 4px #95A5D2BF;
+      opacity: 1;
+      transform: translate3d(-20px, -20px, 75px) scale(1.05);
+      box-shadow: 0px 20px 40px #00000066, 0px 8px 16px #00000033;
+      z-index: 5;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
   }
 }
@@ -119,35 +131,46 @@
 }
 
 .game-item-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px) scale(0.9);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 350px;
-  background-color: #4A4F6DAA;
-  padding: 20px;
-  gap: 10px;
+  width: 320px;
+  background: linear-gradient(135deg, #4a4f6d12 0%, #2d3abfe6 100%);
+  padding: 24px;
+  gap: 12px;
   cursor: default;
-  transition: box-shadow 0.25s ease-in-out, margin-left 0.25s ease-in-out;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+  backdrop-filter: blur(20px);
+  border: 1px solid #ffffff1a;
+  box-shadow: 0px 8px 32px #0000004d;
+  z-index: 1;
 }
 
 .game-item-img-wrapper {
   position: absolute;
-  transition: filter 0.25s ease-in-out, transform 0.25s ease-in-out;
+  transition: filter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
 }
 
 .game-item-img {
   width: 90px;
   background-position: center;
   background-size: cover;
-  transition: box-shadow 0.25s ease-in-out;
-  box-shadow: -1px -1px 0px var(--shadow-color),
-              -2px -2px 0px var(--shadow-color),
-              -3px -3px 0px var(--shadow-color),
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: -2px -2px 0px var(--shadow-color),
               -4px -4px 0px var(--shadow-color),
-              -5px -5px 0px var(--shadow-color);
+              -6px -6px 0px var(--shadow-color),
+              0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   border: 2px solid var(--border-color);
-  border-radius: 2px;
-  box-sizing: content-box;
+  border-radius: 3px;
+  transform-style: preserve-3d;
+  z-index: 5;
 
   &.is-ps3 {
     --shadow-color: #B1B1B1;
@@ -208,17 +231,19 @@
   }
 
   .game-item-info {
-    width: unset;
-    flex: 1;
+    width: 280px;
+    padding: 20px;
   }
 
   .game-item:hover {
     .game-item-img-wrapper {
-      transform: translateX(-28px) skew(0deg, 0deg);
+      transform: translateX(-28px) translateZ(15px) rotateY(-10deg) rotateX(3deg) scale(1.5);
+      filter: drop-shadow(#FFFFFFCC 0px 0px 6px) drop-shadow(#FFFFFF40 0px 0px 15px) drop-shadow(#00000030 0px 4px 8px);
     }
 
     .game-item-info {
-      margin-left: 60px;
+      transform: translate(-50%, -50%) translateY(-10px) scale(1.02);
+      opacity: 1;
     }
   }
 }
