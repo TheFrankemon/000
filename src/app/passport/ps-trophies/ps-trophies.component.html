@@ -1,4 +1,34 @@
 <app-back-button>PS Trophies</app-back-button>
+<div *ngIf="!loading" class="trophy-summary">
+  <div class="trophy-summary-items">
+    <div class="trophy-summary-item">
+      <span class="trophy-summary-item-count">{{trophiesSummary.platinum}}</span>
+      <img src="/assets/trophy-platinum.png" alt="trophy"/>
+    </div>
+    <div class="trophy-summary-item">
+      <span class="trophy-summary-item-count">{{trophiesSummary.gold}}</span>
+      <img src="/assets/trophy-gold.png" alt="trophy"/>
+    </div>
+    <div class="trophy-summary-item">
+      <span class="trophy-summary-item-count">{{trophiesSummary.silver}}</span>
+      <img src="/assets/trophy-silver.png" alt="trophy"/>
+    </div>
+    <div class="trophy-summary-item">
+      <span class="trophy-summary-item-count">{{trophiesSummary.bronze}}</span>
+      <img src="/assets/trophy-bronze.png" alt="trophy"/>
+    </div>
+  </div>
+  <div class="trophy-level">
+    <div class="badge-wrapper">
+      <img src="/assets/badge.png" alt="trophy"/>
+      <span class="trophy-summary-item-count">Level: {{trophiesLevel.pslevel}}</span>
+    </div>
+    <div class="total-wrapper">
+      <span>Total trophies:</span>
+      <span class="trophy-summary-item-count">{{trophiesLevel.total}}</span>
+    </div>
+  </div>
+</div>
 
 <div class="games-container" *ngIf="!loading else loadingComp">
   <div class="game-item" *ngFor="let item of trophiesData">

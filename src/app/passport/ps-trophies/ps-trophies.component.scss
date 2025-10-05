@@ -8,6 +8,75 @@
   --border-color: #2D3ABF;
 }
 
+.trophy-summary {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+  margin-right: 40px;
+  z-index: 2;
+  background-color: var(--section-break-bg-color);
+  transform: skew(-6deg, -4.8deg);
+  
+  .trophy-summary-items {
+    display: flex;
+    gap: 10px;
+  }
+
+  .trophy-summary-item {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-left: -10px;
+    }
+  }
+  
+  .trophy-level {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+
+    .total-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      color: var(--border-color);
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
+
+    .badge-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: var(--border-color);
+      padding: 10px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+  
+      span {
+        color: var(--text-light);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .trophy-summary-item-count {
+    font-size: 20px;
+  }
+}
+
 .games-container {
   display: flex;
   flex-wrap: wrap;
