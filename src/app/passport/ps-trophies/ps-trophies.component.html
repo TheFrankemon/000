@@ -31,7 +31,9 @@
 </div>
 
 <div class="games-container" *ngIf="!loading else loadingComp">
-  <div class="game-item" *ngFor="let item of trophiesData">
+  <div class="game-item" 
+       *ngFor="let item of trophiesData; let i = index" 
+       [class.edge-item]="isEdgeItem(i)">
     <div class="game-item-img-wrapper angle-perspective">
       <div class="game-item-img" [class.is-ps3]="item.console === 'PS3'" [ngStyle]="{
         'background-image':'url(' + item.imgUrl + ')',

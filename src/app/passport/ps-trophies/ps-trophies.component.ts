@@ -34,6 +34,21 @@ export class PsTrophiesComponent implements OnInit {
     this.loading = false;
   }
 
+
+  isEdgeItem(index: number): boolean {
+    const gameItems = document.querySelectorAll('.game-item');
+    const item = gameItems[index];
+    
+    if (!item) return false;
+    
+    const rect = item.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const edgeThreshold = 300; // Distance from right edge to consider as edge case
+    const distanceFromRight = viewportWidth - rect.right;
+    
+    return distanceFromRight < edgeThreshold;
+  }
+
   getTrophiesObj(gameTrophies: TrophiesType['trophies']) {
     const order: (keyof TrophiesType['trophies'])[] = ['platinum', 'gold', 'silver', 'bronze'];
     return order.map(key => [key, gameTrophies[key]]);

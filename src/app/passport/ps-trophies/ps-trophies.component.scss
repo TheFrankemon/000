@@ -120,6 +120,15 @@
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
   }
+
+  // Edge case: items near the right edge - show info to the left
+  &.edge-item {
+    &:hover {
+      .game-item-info {
+        transform: translate3d(-470px, -20px, 75px) scale(1.05);
+      }
+    }
+  }
 }
 
 .game-item-ghost {
@@ -244,6 +253,13 @@
     .game-item-info {
       transform: translate(-50%, -50%) translateY(-10px) scale(1.02);
       opacity: 1;
+    }
+  }
+
+  // Mobile edge case: items near the right edge - show info to the left
+  .game-item.edge-item:hover {
+    .game-item-info {
+      transform: translate(-150%, -50%) translateY(-10px) scale(1.02);
     }
   }
 }
