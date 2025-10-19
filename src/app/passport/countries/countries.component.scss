@@ -72,39 +72,39 @@
 
   &.ar {
     top: 62%;
-    left: 22%;
+    left: 34%;
 
     .country-map {
       clip-path: polygon(32% 48%, 34% 23%, 37% 7%, 43% 0%, 54% 0%, 57% 6%, 63% 6%, 65% 11%, 75% 8%, 70% 18%, 67% 18%, 62% 28%, 68% 41%,
       66% 46%, 57% 46%, 46% 68%, 47% 72%, 40% 85%, 42% 97%, 51% 97%, 52% 100%, 37% 100%, 35% 89%, 26% 88%, 28% 73%, 31% 68%, 31% 61%,
       29% 60%, 29% 52%);
-      transform: scale(1) rotate(20deg);
+      transform: scale(1) rotate(-20deg);
 
       &:hover {
-        transform: scale(1.2) rotate(20deg);
+        transform: scale(1.2) rotate(-20deg);
       }
     }
   }
 
   &.bo {
-    top: 30%;
-    left: 17%;
+    top: 57%;
+    left: 16%;
 
     .country-map {
       clip-path: polygon(7% 58%, 8% 42%, 12% 22%, 6% 8%, 17% 10%, 28% 3%, 39% 0%, 40% 1%, 37% 7%, 43% 20%, 51% 20%, 64% 29%, 74% 29%,
       75% 43%, 76% 47%, 89% 47%, 93% 64%, 92% 80%, 90% 80%, 83% 73%, 65% 74%, 59% 95%, 48% 92%, 45% 98%, 32% 94%, 24% 100%, 19% 100%,
       17% 90%, 13% 82%);
-      transform: scale(1) rotate(-10deg);
+      transform: scale(1) rotate(30deg);
 
       &:hover {
-        transform: scale(1.2) rotate(-10deg);
+        transform: scale(1.2) rotate(30deg);
       }
     }
   }
 
   &.br {
-    top: 60%;
-    left: 46%;
+    top: 62%;
+    left: 51%;
 
     .country-map {
       clip-path: polygon(1% 31%, 5% 23%, 11% 23%, 13% 9%, 34% 0%, 36% 0%, 38% 9%, 47% 8%, 47% 6%, 56% 2%, 61% 11%, 88% 21%, 97% 27%,
@@ -119,16 +119,21 @@
   }
   &.cl {
     top: 62%;
-    left: 6%;
+    left: -5%;
 
     .country-map {
       clip-path: polygon(41% 60%, 51% 9%, 51% 0%, 53% 0%, 60% 13%, 51% 32%, 54% 38%, 49% 58%, 51% 62%, 49% 88%, 55% 88%, 60% 100%, 51% 100%,
       47% 97%, 40% 84%);
+      transform: scale(1) rotate(-30deg);
+
+      &:hover {
+        transform: scale(1.2) rotate(-30deg);
+      }
     }
   }
   &.eg {
     top: 38%;
-    left: 67%;
+    left: 71%;
 
     .country-map {
       clip-path: polygon(0% 6%, 23% 6%, 38% 11%, 45% 6%, 62% 6%, 78% 9%, 86% 26%, 75% 47%, 88% 73%, 92% 73%, 90% 84%, 100% 89%, 100% 94%,
@@ -142,7 +147,7 @@
   }
   &.jp {
     top: 62%;
-    left: 72%;
+    left: 77%;
 
     .country-map {
       clip-path: polygon(12% 87%, 14% 82%, 30% 68%, 44% 68%, 52% 51%, 60% 49%, 60% 21%, 59% 19%, 66% 5%, 64% 0%, 70% 0%, 79% 8%, 84% 5%,
@@ -156,6 +161,16 @@
     .country-map {
       clip-path: polygon(2% 99%, 17% 68%, 26% 54%, 35% 54%, 37% 49%, 42% 46%, 43% 38%, 53% 16%, 62% 16%, 66% 1%, 77% 2%, 93% 8%, 98% 27%,
       88% 29%, 80% 39%, 70% 46%, 61% 46%, 53% 52%, 53% 65%, 51% 69%, 33% 69%, 33% 82%, 31% 87%, 25% 91%, 29% 99%);
+    }
+  }
+  &.mx {
+    top: 28%;
+    left: 18%;
+
+    .country-map {
+      clip-path: polygon(1% 21%, 13% 21%, 23% 26%, 34% 23%, 43% 33%, 51% 33%, 57% 45%, 64% 45%, 62% 63%, 66% 63%, 73% 72%, 77% 69%, 82% 69%, 86% 60%,
+      95% 56%, 98% 62%, 96% 73%, 85% 73%, 87% 78%, 85% 82%, 80% 86%, 72% 80%, 70% 82%, 59% 82%, 43% 75%, 34% 68%, 30% 52%, 26% 58%, 20% 58%,
+      7% 42%, 4% 32%);
     }
   }
   &.pe {
@@ -218,7 +233,8 @@
 @media screen and (max-width: 480px) {
   .map-wrapper {
     width: initial;
-    margin: 130px 5px 0px;
+    margin: 150px 5px 0px;
+    overflow: hidden;
   }
 
   .country-object {
@@ -231,37 +247,41 @@
     }
 
     &.ar {
-      top: 54%;
-      left: 0%;
+      top: 62%;
+      left: 12%;
     }
 
     &.bo {
-      top: 38%;
-      left: 24%;
+      top: 44%;
+      left: 27%;
 
       .country-map {
-        transform: scale(1) rotate(40deg);
+        transform: scale(1) rotate(20deg);
       }
     }
 
     &.br {
-      top: 60%;
-      left: 22%;
+      top: 63%;
+      left: 35%;
     }
 
     &.cl {
-      top: 36%;
-      left: -8%;
+      top: 51%;
+      left: -6%;
+
+      .country-map {
+        transform: scale(1) rotate(0deg);
+      }
     }
 
     &.eg {
-      top: 43%;
-      left: 57%;
+      top: 38%;
+      left: 61%;
     }
 
     &.jp {
       top: 62%;
-      left: 41%;
+      left: 63%;
     }
 
     &.ma {
@@ -269,9 +289,22 @@
       left: 53%;
     }
 
+    &.mx {
+      top: 13%;
+      left: 1%;
+
+      .country-map {
+        transform: scale(1) rotate(20deg);
+      }
+    }
+
     &.pe {
-      top: 18%;
-      left: 3%;
+      top: 32%;
+      left: 0%;
+
+      .country-map {
+        transform: scale(1) rotate(10deg);
+      }
     }
 
     &.es {
@@ -281,7 +314,7 @@
 
     &.tr {
       top: 3%;
-      left: 50%;
+      left: 58%;
     }
 
     &.us {
