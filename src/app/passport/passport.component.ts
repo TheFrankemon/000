@@ -20,7 +20,7 @@ export class PassportComponent implements OnInit {
   }, {
     name: 'Music Library',
     bgImage: 'music.jpg',
-    locked: true,
+    locked: false,
     route: 'music'
   }, {
     name: 'Food',

@@ -5,12 +5,15 @@
     *ngFor="let item of categories"
     class="passport-item"
     [class.disabled]="item.locked"
-    [ngStyle]="{'background-image': 'url(\'assets/passport/'+ item.bgImage + '\')'}"
-    [routerLink]="[item.route]"
   >
-    <h3>{{item.name}}</h3>
-  </div>
-  <div class="under-construction">
-    <span>事中 - UNDER CONSTRUCTION - 工事中 - UNDER CONSTRUCTION</span>
+    <div class="passport-item-content"
+      [ngStyle]="{'background-image': 'url(\'assets/passport/'+ item.bgImage + '\')'}"
+      [routerLink]="[item.route]"
+    >
+      <h3>{{item.name}}</h3>
+    </div>
+    <div *ngIf="item.locked" class="under-construction">
+      <span>事中 - UNDER CONSTRUCTION - 工事中 - UNDER CONSTRUCTION</span>
+    </div>
   </div>
 </div>

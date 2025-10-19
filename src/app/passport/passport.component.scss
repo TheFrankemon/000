@@ -21,25 +21,31 @@
 }
 
 .passport-item {
-  width: 240px;
-  height: 170px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: clip-path ease-in-out 0.25s;
 
-  &:nth-child(odd) {
+  .passport-item-content {
+    width: 240px;
+    height: 170px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: clip-path ease-in-out 0.25s;  
+  }
+
+  &:nth-child(odd) .passport-item-content {
     clip-path: polygon(0% 0%, 100% 5%, 90% 95%, 5% 100%);
   }
-  &:nth-child(even) {
+  &:nth-child(even) .passport-item-content {
     clip-path: polygon(5% 0%, 95% 5%, 100% 95%, 0% 100%);
   }
 
-  &::before {
+  .passport-item-content::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -48,7 +54,7 @@
     transition: backdrop-filter ease-in-out 0.25s;
   }
 
-  &:not(.disabled):hover {
+  &:not(.disabled) .passport-item-content:hover {
     clip-path: polygon(0% 5%, 95% 0%, 95% 100%, 10% 95%);
     cursor: pointer;
 
@@ -61,8 +67,9 @@
     }
   }
 
-  &.disabled {
-   filter: grayscale(1);
+  &.disabled .passport-item-content {
+    pointer-events: none;
+    filter: grayscale(1);
   }
 
   h3 {
@@ -78,11 +85,13 @@
   position: absolute;
   background-color: goldenrod;
   font-weight: bold;
-  left: 505px;
   top: 90px;
   transform: rotateZ(-5deg);
-  clip-path: polygon(0.5% 0%, 96% 0%, 96% 100%, 0.4% 100%);
+  clip-path: polygon(2% 0%, 99% 0%, 99% 100%, 0% 100%);
   border: dashed;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 // MOBILE
