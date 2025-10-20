@@ -1,0 +1,16 @@
+<div class="genres-container">
+  <div 
+    class="genre-card" 
+    *ngFor="let genre of genres"
+    [style.--genre-color]="getGenreColor(genre.name)">
+    
+    <div class="genre-icon">
+      <span class="icon">{{genre.icon}}</span>
+    </div>
+    
+    <div class="genre-info">
+      <div class="genre-name">{{genre.name}}</div>
+      <div class="genre-description">{{genre.description}}</div>
+    </div>
+  </div>
+</div>

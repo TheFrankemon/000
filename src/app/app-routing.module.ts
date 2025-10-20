@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PassportComponent } from './passport/passport.component';
 import { PsTrophiesComponent } from './passport/ps-trophies/ps-trophies.component';
 import { CountriesComponent } from './passport/countries/countries.component';
+import { MusicComponent } from './passport/music/music.component';
 
 const routes: Routes = [{
   path: '',
@@ -17,6 +18,9 @@ const routes: Routes = [{
 }, {
   path: 'passport/countries',
   component: CountriesComponent
+}, {
+  path: 'passport/music',
+  component: MusicComponent
 }, {
   path: '**',
   // redirectTo: '/not-found',

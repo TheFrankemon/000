@@ -1,0 +1,30 @@
+<div class="artists-container">
+  <div class="horizontal-chart">
+    <!-- Artist Bars Container -->
+    <div class="artist-bars-container">
+      <div 
+        class="artist-bar" 
+        *ngFor="let artist of artists; let i = index"
+        [style.--bar-width]="getArtistBarWidth(i) + '%'"
+        [style.--bar-color]="getBarColor(i)"
+        (mouseenter)="onArtistHover(artist)"
+      >
+        <div class="artist-name">{{artist.name}}</div>
+      </div>
+    </div>
+    
+    <!-- Artist Image Display -->
+    <div class="artist-image-container">
+      <img class="artist-image-background" [src]="selectedArtist?.imageUrl" [alt]="selectedArtist?.name">
+      <div class="artist-image" *ngIf="selectedArtist; else placeholder">
+        <img [src]="selectedArtist.imageUrl" [alt]="selectedArtist.name">
+      </div>
+      <ng-template #placeholder>
+        <div class="artist-placeholder">
+          <div class="placeholder-icon">🎵</div>
+          <p>Hover over an artist to see their image</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

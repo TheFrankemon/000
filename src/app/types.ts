@@ -2,7 +2,8 @@ import { SafeUrl } from '@angular/platform-browser'
 
 export type JsonSiloObject = {
   trophies: TrophiesType[],
-  countries: CountryType[]
+  countries: CountryType[],
+  music: MusicType
 }
 
 export type JsonCollection = keyof JsonSiloObject;
@@ -35,4 +36,34 @@ type AirportType = {
   flightDate: string
   flightNumber: string
   airline: string
+}
+
+export type MusicType = {
+  genres: GenreType[]
+  artists: ArtistType[]
+  songs: SongType[]
+}
+
+export type GenreType = {
+  name: string
+  description: string
+  icon: string
+  subgenres?: string[]
+}
+
+export type ArtistType = {
+  name: string
+  genre: string
+  imageUrl: string
+}
+
+export type SongType = {
+  title: string
+  artist: string
+  album: string
+  duration: string
+  genre: string
+  year: number
+  comment?: string
+  imageUrl: string
 }

@@ -1,0 +1,117 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: var(--pstrophies-bg-color);
+  --shadow-color: #1C5AD5;
+  --border-color: #2D3ABF;
+  --music-accent: #374fff;
+}
+
+// Music Summary Panel (similar to trophy summary)
+.music-summary {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+  margin-right: 40px;
+  z-index: 2;
+  background-color: var(--section-break-bg-color);
+  transform: skew(-6deg, -4.8deg);
+  padding: 20px;
+  
+  .music-stats {
+    display: flex;
+    gap: 20px;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    .stat-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--music-accent);
+    }
+
+    .stat-label {
+      max-width: 100px;
+      font-size: 12px;
+      color: var(--dark-color);
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+// Tab Navigation
+.tab-navigation {
+  position: absolute;
+  top: 106px;
+  left: 250px;
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+
+  .tab-button {
+    background: linear-gradient(135deg, #4a4f6d12 0%, #2d3abfe6 100%);
+    border: 1px solid #ffffff1a;
+    color: var(--text-light);
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: skew(-5deg, -2deg);
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      background: linear-gradient(135deg, #4a4f6d30 0%, #2d3abfcc 100%);
+      transform: skew(-5deg, -2deg) scale(1.05);
+    }
+
+    &.active {
+      background: var(--music-accent);
+      transform: skew(-5deg, -2deg) scale(1.5);
+      box-shadow: 0px 4px 15px rgba(55, 79, 255, 0.3);
+    }
+  }
+}
+
+// MOBILE RESPONSIVE
+@media screen and (max-width: 480px) {
+  .music-summary {
+    margin-right: 20px;
+    padding: 15px;
+
+    .music-stats {
+      gap: 15px;
+    }
+
+    .stat-item {
+      .stat-number {
+        font-size: 20px;
+      }
+
+      .stat-label {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .tab-navigation {
+    left: 20px;
+    top: 100px;
+
+    .tab-button {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  }
+}

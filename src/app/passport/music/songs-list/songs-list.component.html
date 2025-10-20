@@ -1,0 +1,21 @@
+<div class="songs-container">
+  <div 
+    class="song-item" 
+    *ngFor="let song of songs; let i = index"
+    [class.edge-item]="isEdgeItem(i)"
+    [style.--song-image-url]="'url(' + song.imageUrl + ')'"
+  >  
+    <div class="song-details">
+      <div class="song-title">{{song.title}}</div>
+      <div class="song-artist">{{song.artist}}</div>
+      <div class="song-album">{{song.album}} • {{song.year}}</div>
+      <div class="song-meta">
+        <span class="song-duration">{{song.duration}}</span>
+      </div>
+    </div>
+
+    <div class="song-comment" *ngIf="song.comment">
+      <div class="comment-text">{{song.comment}}</div>
+    </div>
+  </div>
+</div>

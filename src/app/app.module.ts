@@ -13,6 +13,10 @@ import { SmIconsComponent } from './sm-icons/sm-icons.component';
 import { PassportComponent } from './passport/passport.component';
 import { PsTrophiesComponent } from './passport/ps-trophies/ps-trophies.component';
 import { CountriesComponent } from './passport/countries/countries.component';
+import { MusicComponent } from './passport/music/music.component';
+import { ArtistsComponent } from './passport/music/artists/artists.component';
+import { SongsListComponent } from './passport/music/songs-list/songs-list.component';
+import { GenresComponent } from './passport/music/genres/genres.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { CountryDetailComponent } from './passport/countries/country-detail/country-detail.component';
 import { LoadingComponent } from './loading/loading.component';
@@ -28,6 +32,10 @@ import { LoadingComponent } from './loading/loading.component';
     PassportComponent,
     PsTrophiesComponent,
     CountriesComponent,
+    MusicComponent,
+    ArtistsComponent,
+    SongsListComponent,
+    GenresComponent,
     BackButtonComponent,
     CountryDetailComponent,
     LoadingComponent

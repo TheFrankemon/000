@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { lastValueFrom, map, Observable } from 'rxjs';
-import { CountryType, JsonCollection, JsonSiloObject, TrophiesType } from './types';
+import { CountryType, JsonCollection, JsonSiloObject, TrophiesType, MusicType } from './types';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +30,9 @@ export class JsonHttpService {
   
   getAllTrophies() {
     return this.fetchDataCollection('trophies') as Promise<TrophiesType[]>;
+  }
+
+  getMusicData() {
+    return this.fetchDataCollection('music') as Promise<MusicType>;
   }
 }

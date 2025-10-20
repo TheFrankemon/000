@@ -1,0 +1,71 @@
+<app-back-button>
+  Music
+</app-back-button>
+
+<!-- Music Summary Panel -->
+<div *ngIf="!loading" class="music-summary">
+  <div class="music-stats">
+    <div class="stat-item">
+      <span class="stat-number">4</span>
+      <span class="stat-label">Artists fully hated by me</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">{{topArtists.length}}</span>
+      <span class="stat-label">Artists to die for</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">∞</span>
+      <span class="stat-label">Featured Songs</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">~{{genres.length}}</span>
+      <span class="stat-label">Genres</span>
+    </div>
+  </div>
+</div>
+
+<!-- Tab Navigation -->
+<div class="tab-navigation" *ngIf="!loading">
+  <button 
+    class="tab-button" 
+    [class.active]="activeTab === 'artists'"
+    (click)="activeTab = 'artists'">
+    Artists
+  </button>
+  <button 
+    class="tab-button" 
+    [class.active]="activeTab === 'songs'"
+    (click)="activeTab = 'songs'">
+    Featured Songs
+  </button>
+  <button 
+    class="tab-button" 
+    [class.active]="activeTab === 'genres'"
+    (click)="activeTab = 'genres'">
+    Genres
+  </button>
+</div>
+
+<!-- Artists Chart -->
+<app-artists 
+  *ngIf="!loading && activeTab === 'artists'"
+  [artists]="topArtists"
+  [selectedArtist]="selectedArtist"
+  (artistHover)="onArtistHover($event)">
+</app-artists>
+
+<!-- Songs List -->
+<app-songs-list 
+  *ngIf="!loading && activeTab === 'songs'"
+  [songs]="allSongs">
+</app-songs-list>
+
+<!-- Genres Grid -->
+<app-genres 
+  *ngIf="!loading && activeTab === 'genres'"
+  [genres]="genres">
+</app-genres>
+
+<ng-template #loadingComp>
+  <app-loading></app-loading>
+</ng-template>

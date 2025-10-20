@@ -1,0 +1,114 @@
+.genres-container {
+  padding: 200px 120px 60px;
+  overflow-y: auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .genre-card {
+    background: linear-gradient(135deg, #4a4f6d12 0%, #2d3abfe6 100%);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    border: 1px solid #ffffff1a;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transform: skew(-1deg, -0.5deg);
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:hover {
+      transform: skew(-1deg, -0.5deg) scale(1.05);
+      box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #4a4f6d20 0%, #2d3abfcc 100%);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, var(--genre-color) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 0;
+    }
+
+    .genre-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+
+      .icon {
+        filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
+      }
+    }
+
+    .genre-info {
+      position: relative;
+      z-index: 1;
+
+      .genre-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--text-light);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .genre-description {
+        font-size: 14px;
+        color: var(--mid-color);
+        text-align: center;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// MOBILE RESPONSIVE
+@media screen and (max-width: 480px) {
+  .genres-container {
+    padding: 150px 20px 40px;
+
+    .genres-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .genre-card {
+      padding: 20px;
+      min-height: 160px;
+
+      .genre-icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+
+      .genre-info {
+        .genre-name {
+          font-size: 20px;
+        }
+
+        .genre-description {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
